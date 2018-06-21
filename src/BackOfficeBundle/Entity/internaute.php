@@ -52,7 +52,7 @@ class internaute
     /**
      * @var int
      *
-     * @ORM\ManyToOne(targetEntity="Voiture", inversedBy="id")
+     * @ORM\ManyToOne(targetEntity="Voiture", mappedBy="id")
      * @ORM\JoinColumn(name="voiture_id", referencedColumnName="id")
      */
     private $voitureId;
@@ -60,7 +60,7 @@ class internaute
     /**
      * @var int
      *
-     * @ORM\ManyToOne(targetEntity="Ville", inversedBy="id")
+     * @ORM\ManyToOne(targetEntity="Ville", mappedBy="id")
      * @ORM\JoinColumn(name="ville_id", referencedColumnName="id")
      */
     private $villeId;
