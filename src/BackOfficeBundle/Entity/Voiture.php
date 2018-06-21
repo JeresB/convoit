@@ -2,23 +2,36 @@
 
 namespace BackOfficeBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * Voiture
+ *
+ * @ORM\Table(name="voiture")
+ * @ORM\Entity(repositoryClass="BackOfficeBundle\Repository\VoitureRepository")
  */
 class Voiture
 {
     /**
      * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="voiture", type="string", length=45)
      */
     private $voiture;
 
     /**
      * @var int
+     *
+     * @ORM\Column(name="nb_places", type="integer")
      */
     private $nbPlaces;
 
