@@ -52,14 +52,16 @@ class internaute
     /**
      * @var int
      *
-     * @ORM\Column(name="voiture_id", type="integer")
+     * @ORM\ManyToOne(targetEntity="Voiture", inversedBy="internautes")
+     * @ORM\JoinColumn(name="voiture_id", referencedColumnName="id")
      */
     private $voitureId;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="ville_id", type="integer")
+     * @ORM\ManyToOne(targetEntity="Ville", inversedBy="internautes")
+     * @ORM\JoinColumn(name="ville_id", referencedColumnName="id")
      */
     private $villeId;
 
@@ -218,4 +220,3 @@ class internaute
         return $this->villeId;
     }
 }
-
