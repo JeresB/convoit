@@ -38,21 +38,24 @@ class Trajet
     /**
      * @var int
      *
-     * @ORM\Column(name="internaute_id", type="integer")
+     * @ORM\ManyToOne(targetEntity="Internaute")
+     * @ORM\JoinColumn(name="internaute_id", referencedColumnName="id")
      */
     private $internauteId;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="ville_id", type="integer")
+     * @ORM\ManyToOne(targetEntity="Ville")
+     * @ORM\JoinColumn(name="ville_id", referencedColumnName="id")
      */
     private $villeId;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="ville_id1", type="integer")
+     * @ORM\ManyToOne(targetEntity="Ville")
+     * @ORM\JoinColumn(name="ville_id1", referencedColumnName="id")
      */
     private $villeId1;
 
@@ -187,4 +190,3 @@ class Trajet
         return $this->villeId1;
     }
 }
-
