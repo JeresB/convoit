@@ -1,4 +1,7 @@
 {% extends 'FrontOfficeBundle:Default:layout.html.twig' %}
 {% block content %}
 Hello World from front office !
+{% for voiture in voitures %}
+    id : {{ voiture.id }}, voiture : {{ voiture.voiture }}, nb_places : {{ voiture.nb_places }}
+{% endfor %}
 {% endblock %}

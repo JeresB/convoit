@@ -8,6 +8,11 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('FrontOfficeBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $voitures = $em->getRepository('BackOfficeBundle:Voiture')->findAll();
+
+        return $this->render('FrontOfficeBundle:Default:index.html.twig',
+          array("voitures" => $voitures));
     }
 }
