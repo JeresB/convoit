@@ -24,4 +24,18 @@ class DefaultController extends Controller
       return $this->render('FrontOfficeBundle:Default:details.html.twig',
         array("infos" => $trajet));
     }
+
+    public function searchAction($search)
+    {
+      $em = $this->getDoctrine()->getManager();
+      $query = $em->createQuery("SELECT * FROM BackOfficeBundle:Trajet
+                                WHERE ville_id LIKE '%:search%'
+                                || ville_id1 LIKE '%:search%'")
+                                ->setParameter('search', $search);
+
+      $trajets = $query->getResult();
+
+      return $this->render('FrontOfficeBundle:Default:details.html.twig',
+        array("trajets" => $trajets));
+    }
 }

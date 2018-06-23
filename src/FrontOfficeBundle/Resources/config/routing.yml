@@ -7,3 +7,7 @@ trajet_homepage:
     defaults: { _controller: FrontOfficeBundle:Default:details }
     requirements:
         page: '\d+'
+
+search_homepage:
+    path:     /{search}
+    defaults: { _controller: FrontOfficeBundle:Default:search }
