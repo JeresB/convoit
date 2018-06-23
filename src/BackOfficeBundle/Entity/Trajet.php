@@ -39,7 +39,7 @@ class Trajet
      * @var int
      *
      * @ORM\ManyToOne(targetEntity="internaute")
-     * @ORM\JoinColumn(name="internauteId", referencedColumnName="id")
+     * @ORM\JoinColumn(name="internaute_id", referencedColumnName="id")
      */
     private $internauteId;
 
@@ -47,7 +47,7 @@ class Trajet
      * @var int
      *
      * @ORM\ManyToOne(targetEntity="Ville")
-     * @ORM\JoinColumn(name="villeId", referencedColumnName="id")
+     * @ORM\JoinColumn(name="ville_id", referencedColumnName="id")
      */
     private $villeId;
 
@@ -55,7 +55,7 @@ class Trajet
      * @var int
      *
      * @ORM\ManyToOne(targetEntity="Ville")
-     * @ORM\JoinColumn(name="villeId1", referencedColumnName="id")
+     * @ORM\JoinColumn(name="ville_id1", referencedColumnName="id")
      */
     private $villeId1;
 
