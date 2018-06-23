@@ -9,5 +9,5 @@ trajet_homepage:
         page: '\d+'
 
 search_homepage:
-    path:     /{search}
+    path:     /search/{search}
     defaults: { _controller: FrontOfficeBundle:Default:search }
