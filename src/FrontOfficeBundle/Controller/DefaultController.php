@@ -28,8 +28,8 @@ class DefaultController extends Controller
     public function searchAction($search)
     {
       $em = $this->getDoctrine()->getManager();
-      $query = $em->createQuery("SELECT id, nb_km FROM BackOfficeBundle:Trajet
-                                WHERE villeId LIKE :search")
+      $query = $em->createQuery("SELECT t.id, t.nb_km FROM BackOfficeBundle:Trajet t
+                                WHERE t.villeId LIKE :search")
                                 ->setParameter('search', '%'.$search.'%');
 
       $trajets = $query->getResult();
