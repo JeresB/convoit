@@ -9,7 +9,7 @@ class DefaultController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $query = $em->createQuery('SELECT * FROM BackOfficeBundle:Trajet');
+        $query = $em->createQuery('SELECT id, nb_km, date, internaute_id, ville_id, ville_id1 FROM BackOfficeBundle:Trajet');
         $trajets = $query->getResult();
         //$trajets = $em->getRepository('BackOfficeBundle:Trajet')->findAll();
 
