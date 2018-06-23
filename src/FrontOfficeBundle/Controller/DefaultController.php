@@ -9,8 +9,9 @@ class DefaultController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
-        $trajets = $em->getRepository('BackOfficeBundle:Trajet')->findAll();
+        $query = $em->createQuery('SELECT * FROM BackOfficeBundle:Trajet');
+        $trajets = $query->getResult();
+        //$trajets = $em->getRepository('BackOfficeBundle:Trajet')->findAll();
 
         return $this->render('FrontOfficeBundle:Default:index.html.twig',
           array("trajets" => $trajets));
