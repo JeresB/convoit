@@ -38,7 +38,7 @@ class Trajet
     /**
      * @var int
      *
-     * @ORM\ManyToOne(targetEntity="Internaute")
+     * @ORM\ManyToOne(targetEntity="internaute")
      * @ORM\JoinColumn(name="internauteId", referencedColumnName="id")
      */
     private $internauteId;
