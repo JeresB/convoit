@@ -29,7 +29,7 @@ class DefaultController extends Controller
     {
       $em = $this->getDoctrine()->getManager();
       $query = $em->createQuery("SELECT t.id, t.nbKm FROM BackOfficeBundle:Trajet t
-                                WHERE t.villeId LIKE :search")
+                                WHERE t.villeId = :search")
                                 ->setParameter('search', '%'.$search.'%');
 
       $trajets = $query->getResult();
