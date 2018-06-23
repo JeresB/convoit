@@ -2,6 +2,6 @@
 {% block content %}
 Liste :<br>
 {% for trajet in trajets %}
-    id : <a href="{{ trajet.id }}">{{ trajet.id }}</a>
+    id : <a href="/{{ trajet.id }}">{{ trajet.id }}</a>
 {% endfor %}
 {% endblock %}
