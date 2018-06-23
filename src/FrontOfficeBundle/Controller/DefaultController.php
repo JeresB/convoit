@@ -34,7 +34,7 @@ class DefaultController extends Controller
 
       $trajets = $query->getResult();
 
-      return $this->render('FrontOfficeBundle:Default:details.html.twig',
+      return $this->render('FrontOfficeBundle:Default:index.html.twig',
         array("trajets" => $trajets));
     }
 }
