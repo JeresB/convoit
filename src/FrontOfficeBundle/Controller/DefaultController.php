@@ -31,9 +31,9 @@ class DefaultController extends Controller
       $query = $em->createQuery("SELECT t.id, t.nbKm
         FROM BackOfficeBundle:Trajet t,
         BackOfficeBundle:Ville v
-        WHERE v.ville LIKE ? AND
+        WHERE v.ville LIKE :search AND
         t.villeId = v.id")
-        ->setParameter('%'.$search.'%');
+        ->setParameter('search', '%'.$search.'%');
 
       $trajets = $query->getResult();
 
