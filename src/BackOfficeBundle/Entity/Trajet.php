@@ -38,24 +38,24 @@ class Trajet
     /**
      * @var int
      *
-     * @ORM\ManyToOne(targetEntity="BackOfficeBundle\Entity\Internaute")
-     * @ORM\JoinColumn(name="internaute_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Internaute")
+     * @ORM\JoinColumn(name="internauteId", referencedColumnName="id")
      */
     private $internauteId;
 
     /**
      * @var int
      *
-     * @ORM\ManyToOne(targetEntity="BackOfficeBundle\Entity\Ville")
-     * @ORM\JoinColumn(name="ville_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Ville")
+     * @ORM\JoinColumn(name="villeId", referencedColumnName="id")
      */
     private $villeId;
 
     /**
      * @var int
      *
-     * @ORM\ManyToOne(targetEntity="BackOfficeBundle\Entity\Ville")
-     * @ORM\JoinColumn(name="ville_id1", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Ville")
+     * @ORM\JoinColumn(name="villeId1", referencedColumnName="id")
      */
     private $villeId1;
 
