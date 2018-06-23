@@ -10,9 +10,18 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $voitures = $em->getRepository('BackOfficeBundle:Voiture')->findAll();
+        $trajets = $em->getRepository('BackOfficeBundle:Trajet')->findAll();
 
         return $this->render('FrontOfficeBundle:Default:index.html.twig',
-          array("voitures" => $voitures));
+          array("trajets" => $trajets));
+    }
+
+    public function detailsAction($id)
+    {
+      $em = $this->getDoctrine()->getManager();
+      $trajet = $em->getRepository('BackOfficeBundle:Trajet')->find($id);
+
+      return $this->render('FrontOfficeBundle:Default:details.html.twig',
+        array("infos" => $trajet));
     }
 }

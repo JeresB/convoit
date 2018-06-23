@@ -1,3 +1,9 @@
 front_office_homepage:
     path:     /
     defaults: { _controller: FrontOfficeBundle:Default:index }
+
+trajet_homepage:
+    path:     /{id}
+    defaults: { _controller: FrontOfficeBundle:Default:details }
+    requirements:
+        page: '\d+'
