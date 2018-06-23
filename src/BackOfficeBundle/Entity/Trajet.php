@@ -38,7 +38,7 @@ class Trajet
     /**
      * @var int
      *
-     * @ORM\ManyToOne(targetEntity="Internaute")
+     * @ORM\ManyToOne(targetEntity="BackOfficeBundle\Entity\Internaute")
      * @ORM\JoinColumn(name="internaute_id", referencedColumnName="id")
      */
     private $internauteId;
@@ -46,7 +46,7 @@ class Trajet
     /**
      * @var int
      *
-     * @ORM\ManyToOne(targetEntity="Ville")
+     * @ORM\ManyToOne(targetEntity="BackOfficeBundle\Entity\Ville")
      * @ORM\JoinColumn(name="ville_id", referencedColumnName="id")
      */
     private $villeId;
@@ -54,7 +54,7 @@ class Trajet
     /**
      * @var int
      *
-     * @ORM\ManyToOne(targetEntity="Ville")
+     * @ORM\ManyToOne(targetEntity="BackOfficeBundle\Entity\Ville")
      * @ORM\JoinColumn(name="ville_id1", referencedColumnName="id")
      */
     private $villeId1;
