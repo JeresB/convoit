@@ -64,7 +64,7 @@ class DefaultController extends Controller
       $voiture = $em->getRepository('BackOfficeBundle:Voiture')->findById($internaute->getVoitureId());
 
       return $this->render('FrontOfficeBundle:Default:details.html.twig',
-        array("infos" => $trajet,
+        array("infos" => $trajets,
               "internaute" => $internaute,
               "voiture" => $voiture));
     }
