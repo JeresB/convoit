@@ -31,8 +31,8 @@ class DefaultController extends Controller
             BackOfficeBundle:Ville v,
             BackOfficeBundle:Ville vd,
             BackOfficeBundle:Ville va,
-            WHERE (v.ville LIKE :search AND t.villeId = v.id)
-            OR (v.ville LIKE :search AND t.villeId1 = v.id)
+            WHERE ((v.ville LIKE :search AND t.villeId = v.id)
+            OR (v.ville LIKE :search AND t.villeId1 = v.id))
             AND vd.id = t.villeId AND va.id = t.villeId1")
             ->setParameter('search', '%'.$search.'%');
 
