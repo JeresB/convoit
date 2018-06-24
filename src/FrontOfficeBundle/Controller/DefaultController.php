@@ -5,11 +5,17 @@ namespace FrontOfficeBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+
 class DefaultController extends Controller
 {
     public function indexAction(Request $request)
     {
-        $search = $this->get('request')->request->get('search');
+        $form = $this->createFormBuilder()
+          ->add('search', TextType::class)
+          ->add('\f002', SubmitType::class)
+          ->getForm();
 
 
         $em = $this->getDoctrine()->getManager();
@@ -17,7 +23,9 @@ class DefaultController extends Controller
         $trajets = $em->getRepository('BackOfficeBundle:Trajet')->findAll();
 
         return $this->render('FrontOfficeBundle:Default:index.html.twig',
-          array("trajets" => $trajets));
+          array("trajets" => $trajets,
+                "form" => $form->createView()
+          ));
     }
 
     public function detailsAction($id)
