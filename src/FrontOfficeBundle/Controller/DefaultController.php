@@ -49,21 +49,17 @@ class DefaultController extends Controller
     {
       $em = $this->getDoctrine()->getManager();
 
-      $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId), v1.ville, v2.ville
-        FROM BackOfficeBundle:Trajet t,
-        BackOfficeBundle:Ville v1,
-        BackOfficeBundle:Ville v2
-        WHERE t.villeId = v1.id AND t.villeId1 = v2.id AND t.id = :id")
-        ->setParameter('id', $id);
-
-      $trajets = $query->getResult();
-      $trajet = $trajets[0];
-
-    //  $internaute = $em->getRepository('BackOfficeBundle:internaute')->find($trajet->getInternauteId());
-      //$voiture = $em->getRepository('BackOfficeBundle:Voiture')->findById($internaute->getVoitureId());
+      $trajet = $em->getRepository('BackOfficeBundle:Trajet')->find($id);
+      $depart = $em->getRepository('BackOfficeBundle:Ville')->find($trajet->getVilleId());
+      $arrivee = $em->getRepository('BackOfficeBundle:Ville')->find($trajet->getVilleId1());
+      $internaute = $em->getRepository('BackOfficeBundle:internaute')->find($trajet->getInternauteId());
+      $voiture = $em->getRepository('BackOfficeBundle:Voiture')->findById($internaute->getVoitureId());
 
       return $this->render('FrontOfficeBundle:Default:details.html.twig',
         array("infos" => $trajet,
-            ));
+              "internaute" => $internaute,
+              "voiture" => $voiture,
+              "depart" => $depart,
+              "arrivee" => $arrivee));
     }
 }
