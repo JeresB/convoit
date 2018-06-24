@@ -26,7 +26,7 @@ class DefaultController extends Controller
           $search = $form["search"]->getData();
           $text = 'Résultats de la recherche : '.$search;
 
-          $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId), vd.ville as depart, va.ville as arrivee
+          $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId) as internaute, vd.ville as depart, va.ville as arrivee
             FROM BackOfficeBundle:Trajet t,
             BackOfficeBundle:Ville v,
             BackOfficeBundle:Ville vd,
@@ -44,9 +44,15 @@ class DefaultController extends Controller
           // Dans ce cas la le même trajet se retrouve en doublon
           foreach ($trajets_result as $trajet) {
             if(!in_array($trajet, $trajets)){
+                // On récupère les infos de l'internaute
+                $internaute = $em->getRepository('BackOfficeBundle:internaute')->find($trajet['internaute']);
+                $trajet['internaute'] = $internaute['prenom'].' '.$internaute['prenom'];
+
                 $trajets[] = $trajet;
             }
           }
+
+
         } else {
           $trajets = $em->getRepository('BackOfficeBundle:Trajet')->findAll();
         }
