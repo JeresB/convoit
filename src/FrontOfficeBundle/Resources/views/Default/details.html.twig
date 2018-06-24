@@ -1,23 +1,28 @@
 {% extends 'FrontOfficeBundle:Default:layout.html.twig' %}
 {% block content %}
-<div class="ui card">
+<div class="ui fluid card">
   <div class="content">
     <i class="right floated fas fa-car"></i>
     <div class="header">
-      Elliot Fu
+      Trajet
     </div>
     <div class="meta">
-      Friends of Veronika
+      Date<span class="rigth floated">km</span>
     </div>
     <div class="description">
-      Elliot requested permission to view your contact details
+      Internaute
     </div>
   </div>
   <div class="extra content">
-    <div class="ui two buttons">
-      <div class="ui basic green button">Approve</div>
-      <div class="ui basic red button">Decline</div>
-    </div>
+    voiture
+  </div>
+  <div class="extra content">
+    <span class="right floated">
+      Départ
+    </span>
+    <span>
+      Arrivée
+    </span>
   </div>
 </div>
 {{ dump(infos) }}
