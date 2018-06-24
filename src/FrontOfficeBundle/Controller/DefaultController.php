@@ -30,7 +30,7 @@ class DefaultController extends Controller
             FROM BackOfficeBundle:Trajet t,
             BackOfficeBundle:Ville v
             WHERE v.ville LIKE :search AND
-            t.villeId = v.id")
+            (t.villeId = v.id OR t.villeId1 = v.id)")
             ->setParameter('search', '%'.$search.'%');
 
           $trajets = $query->getResult();
