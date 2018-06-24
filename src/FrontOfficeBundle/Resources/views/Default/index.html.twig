@@ -8,9 +8,11 @@
         <i class="search icon"></i> -->
         {{ form_start(form) }}
         {{ form_widget(form.search, { 'attr': {'class': 'prompt'} }) }}
-        {{ form_widget(form.submit, { 'attr': {'class': 'search icon'} }) }}
         {{ form_end(form) }}
       </div>
+    </div>
+    <div class="">
+      {{ dump(data) }}
     </div>
     <table class="ui selectable celled table">
       <thead>

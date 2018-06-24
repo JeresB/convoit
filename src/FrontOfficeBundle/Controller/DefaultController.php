@@ -12,11 +12,16 @@ class DefaultController extends Controller
 {
     public function indexAction(Request $request)
     {
+        $data = "NULL";
         $form = $this->createFormBuilder()
           ->add('search', TextType::class)
-          ->add('submit', SubmitType::class)
+          ->add('<i class="fas fa-search"></i>', SubmitType::class)
           ->getForm();
 
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+          $data = $form->getData();
+        }
 
         $em = $this->getDoctrine()->getManager();
 
@@ -24,7 +29,8 @@ class DefaultController extends Controller
 
         return $this->render('FrontOfficeBundle:Default:index.html.twig',
           array("trajets" => $trajets,
-                "form" => $form->createView()
+                "form" => $form->createView(),
+                "data" => $data
           ));
     }
 
