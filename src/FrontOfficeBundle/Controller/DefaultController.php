@@ -62,10 +62,9 @@ class DefaultController extends Controller
         ->setParameter('id', $id);
 
       $trajets = $query->getResult();
-      $trajet = $trajets[0];
 
-      //$trajet = $em->getRepository('BackOfficeBundle:Trajet')->find($id);
-      $internaute = $em->getRepository('BackOfficeBundle:internaute')->find($trajets[0]['internauteId']);
+      $trajet = $em->getRepository('BackOfficeBundle:Trajet')->find($id);
+      $internaute = $em->getRepository('BackOfficeBundle:internaute')->find($trajet->getInternauteId());
 
       return $this->render('FrontOfficeBundle:Default:details.html.twig',
         array("infos" => $trajets[0],
