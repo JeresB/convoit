@@ -46,7 +46,7 @@ class DefaultController extends Controller
             if(!in_array($trajet, $trajets)){
                 // On récupère les infos de l'internaute
                 $internaute = $em->getRepository('BackOfficeBundle:internaute')->find($trajet['internaute']);
-                $trajet['internaute'] = $internaute['prenom'].' '.$internaute['prenom'];
+                $trajet['internaute'] = $internaute;
 
                 $trajets[] = $trajet;
             }
