@@ -19,9 +19,9 @@ class DefaultController extends Controller
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-          $data = $form->getData();
+          $search = $form["search"]->getData();
 
-          return $this->redirectToRoute('search_homepage', array('search' => $data->search));
+          return $this->redirectToRoute('search_homepage', array('search' => $search));
         }
 
         $em = $this->getDoctrine()->getManager();
