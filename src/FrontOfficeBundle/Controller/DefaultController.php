@@ -58,8 +58,7 @@ class DefaultController extends Controller
             FROM BackOfficeBundle:Trajet t,
             BackOfficeBundle:Ville vd,
             BackOfficeBundle:Ville va
-            WHERE
-            AND vd.id = t.villeId AND va.id = t.villeId1");
+            WHERE vd.id = t.villeId AND va.id = t.villeId1");
 
           $trajets = $query->getResult();
 
