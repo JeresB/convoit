@@ -26,7 +26,7 @@ class DefaultController extends Controller
           $search = $form["search"]->getData();
           $text = 'Résultats de la recherche : '.$search;
 
-          $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId), IDENTITY(t.villeId), IDENTITY(t.villeId1)
+          $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId), v.ville
             FROM BackOfficeBundle:Trajet t,
             BackOfficeBundle:Ville v
             WHERE (v.ville LIKE :search AND t.villeId = v.id)
