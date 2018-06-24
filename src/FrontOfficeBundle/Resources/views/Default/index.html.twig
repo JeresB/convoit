@@ -4,8 +4,11 @@
   <section class="ui raised segment">
     <div class="ui form">
       <div class="ui icon input">
-        <input class="prompt" type="text" placeholder="Common passwords...">
-        <i class="search icon"></i>
+        <!-- <input class="prompt" type="text" placeholder="Common passwords...">
+        <i class="search icon"></i> -->
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
       </div>
     </div>
     <table class="ui selectable celled table">
