@@ -37,9 +37,9 @@
               <td><a href="/{{ trajet.id}}">Trajet {{ trajet.id }}</a></td>
               <td>{{ trajet.nbKm }}</td>
               <td>{{ trajet.date|date("m/d/Y H:i:s") }}</td>
-              <td>{{ trajet.id }}</td>
-              <td>{{ trajet.id }}</td>
-              <td>{{ trajet.id }}</td>
+              <td>{{ trajet.internaute.prenom }} {{ trajet.internaute.nom }}</td>
+              <td>{{ trajet.depart }}</td>
+              <td>{{ trajet.arrivee }}</td>
             </tr>
         {% endfor %}
       </tbody>
