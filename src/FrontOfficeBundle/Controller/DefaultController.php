@@ -26,11 +26,14 @@ class DefaultController extends Controller
           $search = $form["search"]->getData();
           $text = 'Résultats de la recherche : '.$search;
 
-          $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId), v.ville
+          $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId), vd.ville as depart, va.ville as arrivee
             FROM BackOfficeBundle:Trajet t,
-            BackOfficeBundle:Ville v
+            BackOfficeBundle:Ville v,
+            BackOfficeBundle:Ville vd,
+            BackOfficeBundle:Ville va,
             WHERE (v.ville LIKE :search AND t.villeId = v.id)
-            OR (v.ville LIKE :search AND t.villeId1 = v.id)")
+            OR (v.ville LIKE :search AND t.villeId1 = v.id)
+            AND vd.id = t.villeId AND va.ville = t.villeId1")
             ->setParameter('search', '%'.$search.'%');
 
           $trajets = array();
