@@ -12,15 +12,15 @@ class DefaultController extends Controller
 {
     public function indexAction(Request $request)
     {
-        $data = "NULL";
         $form = $this->createFormBuilder()
           ->add('search', TextType::class)
-          ->add('<i class="fas fa-search"></i>', SubmitType::class)
+          ->add('Rechercher', SubmitType::class)
           ->getForm();
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
           $data = $form->getData();
+          return $this->redirectToRoute('search_homepage/search/'.$data[0]);
         }
 
         $em = $this->getDoctrine()->getManager();
@@ -29,8 +29,7 @@ class DefaultController extends Controller
 
         return $this->render('FrontOfficeBundle:Default:index.html.twig',
           array("trajets" => $trajets,
-                "form" => $form->createView(),
-                "data" => $data
+                "form" => $form->createView()
           ));
     }
 
