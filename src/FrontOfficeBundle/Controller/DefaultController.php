@@ -49,7 +49,12 @@ class DefaultController extends Controller
     {
       $em = $this->getDoctrine()->getManager();
 
-      $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId), IDENTITY(t.villeId), v1.ville as depart, v2.ville
+      $query = $em->createQuery("SELECT t.id as id,
+        t.nbKm as nbKm,
+        t.date as date,
+        IDENTITY(t.internauteId) as internaute,
+        v1.ville as depart,
+        v2.ville as arrivee
         FROM BackOfficeBundle:Trajet t,
         BackOfficeBundle:Ville v1,
         BackOfficeBundle:Ville v2
