@@ -1,13 +1,15 @@
 {% extends 'FrontOfficeBundle:Default:layout.html.twig' %}
 {% block content %}
 <main class="ui container">
+  <div class="ui hidden divider"></div>
   <section class="ui raised segment">
     <div class="ui form">
       <div class="ui icon input">
         <!-- <input class="prompt" type="text" placeholder="Common passwords...">
         <i class="search icon"></i> -->
         {{ form_start(form) }}
-        {{ form_widget(form.search, { 'attr': {'class': 'prompt'} }) }}
+          {{ form_widget(form.search, { 'attr': {'class': 'prompt'} }) }}
+          {{ form_widget(form.Rechercher, { 'attr': {'class': 'prompt'} }) }}
         {{ form_end(form) }}
       </div>
     </div>
