@@ -1,5 +1,24 @@
 {% extends 'FrontOfficeBundle:Default:layout.html.twig' %}
 {% block content %}
-Details<br>
+<div class="ui card">
+  <div class="content">
+    <i class="right floated fas fa-car"></i>
+    <div class="header">
+      Elliot Fu
+    </div>
+    <div class="meta">
+      Friends of Veronika
+    </div>
+    <div class="description">
+      Elliot requested permission to view your contact details
+    </div>
+  </div>
+  <div class="extra content">
+    <div class="ui two buttons">
+      <div class="ui basic green button">Approve</div>
+      <div class="ui basic red button">Decline</div>
+    </div>
+  </div>
+</div>
 {{ dump(infos) }}
 {% endblock %}
