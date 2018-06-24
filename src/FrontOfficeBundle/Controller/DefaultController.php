@@ -39,17 +39,12 @@ class DefaultController extends Controller
           $trajets = array();
           $trajets_result = $query->getResult();
 
-          // Pour eviter les doublons
-          // Exemple une recherche avec 'B' (ville départ Brest, ville d'arrivée Saint-Brieuc)
-          // Dans ce cas la le même trajet se retrouve en doublon
           foreach ($trajets_result as $trajet) {
-            if(!in_array($trajet, $trajets)){
-                // On récupère les infos de l'internaute
-                $internaute = $em->getRepository('BackOfficeBundle:internaute')->find($trajet['internaute']);
-                $trajet['internaute'] = $internaute;
+              // On récupère les infos de l'internaute
+              $internaute = $em->getRepository('BackOfficeBundle:internaute')->find($trajet['internaute']);
+              $trajet['internaute'] = $internaute;
 
-                $trajets[] = $trajet;
-            }
+              $trajets[] = $trajet;
           }
 
 
