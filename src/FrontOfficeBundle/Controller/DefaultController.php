@@ -6,10 +6,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $search = $this->get('request')->request->get('search');
-        
+
 
         $em = $this->getDoctrine()->getManager();
 
