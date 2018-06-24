@@ -1,7 +1,37 @@
 {% extends 'FrontOfficeBundle:Default:layout.html.twig' %}
 {% block content %}
-Liste :<br>
-{% for trajet in trajets %}
-    id : <a href="/{{ trajet.id }}">{{ trajet.id }}</a>
-{% endfor %}
+<main class="ui container">
+  <section class="ui raised segment">
+    <div class="ui form">
+      <div class="ui icon input">
+        <input class="prompt" type="text" placeholder="Common passwords...">
+        <i class="search icon"></i>
+      </div>
+    </div>
+    <table class="ui selectable celled table">
+      <thead>
+        <tr>
+          <th>Identifiant</th>
+          <th>Nombre de km</th>
+          <th>Date</th>
+          <th>Internaute</th>
+          <th>Départ</th>
+          <th>Arrivée</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for trajet in trajets %}
+            <tr>
+              <td><a href="/{{ trajet.id}}">Trajet {{ trajet.id }}</a></td>
+              <td>{{ trajet.id }}</td>
+              <td>{{ trajet.id }}</td>
+              <td>{{ trajet.id }}</td>
+              <td>{{ trajet.id }}</td>
+              <td>{{ trajet.id }}</td>
+            </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+</main>
 {% endblock %}
