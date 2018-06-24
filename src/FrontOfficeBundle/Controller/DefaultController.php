@@ -33,6 +33,7 @@ class DefaultController extends Controller
             OR (v.ville LIKE :search AND t.villeId1 = v.id)")
             ->setParameter('search', '%'.$search.'%');
 
+          $trajets = array();
           $trajets_result = $query->getResult();
 
           // Pour eviter les doublons
