@@ -30,7 +30,7 @@ class DefaultController extends Controller
             FROM BackOfficeBundle:Trajet t,
             BackOfficeBundle:Ville v,
             BackOfficeBundle:Ville vd,
-            BackOfficeBundle:Ville va,
+            BackOfficeBundle:Ville va
             WHERE ((v.ville LIKE :search AND t.villeId = v.id)
             OR (v.ville LIKE :search AND t.villeId1 = v.id))
             AND vd.id = t.villeId AND va.id = t.villeId1")
