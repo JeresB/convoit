@@ -21,11 +21,10 @@ class DefaultController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
           $search = $form["search"]->getData();
 
-          return $this->redirectToRoute('search_homepage', array('search' => $search));
+          return $this->redirectToRoute('search_homepage', array('search' => $search, 'form' => $form->createView()));
         }
 
         $em = $this->getDoctrine()->getManager();
-
         $trajets = $em->getRepository('BackOfficeBundle:Trajet')->findAll();
 
         return $this->render('FrontOfficeBundle:Default:index.html.twig',
