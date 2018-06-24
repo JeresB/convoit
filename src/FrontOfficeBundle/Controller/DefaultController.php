@@ -49,7 +49,7 @@ class DefaultController extends Controller
     {
       $em = $this->getDoctrine()->getManager();
       $trajet = $em->getRepository('BackOfficeBundle:Trajet')->find($id);
-      $internaute = $em->getRepository('BackOfficeBundle:internaute')->find($trajet->internauteId);
+      $internaute = $em->getRepository('BackOfficeBundle:internaute')->find($trajet->getInternauteId());
 
       return $this->render('FrontOfficeBundle:Default:details.html.twig',
         array("infos" => $trajet,
