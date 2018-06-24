@@ -1,5 +1,6 @@
 back_office_ville:
     resource: "@BackOfficeBundle/Controller/VilleController.php"
+    prefix:   /adminbo
     type:     annotation
 
 back_office_voiture:
