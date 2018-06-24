@@ -47,8 +47,11 @@ class DefaultController extends Controller
 
     public function detailsAction($id)
     {
+      // On récupère le manager
       $em = $this->getDoctrine()->getManager();
 
+      // On crée une requete pour récupérer le detail d'un trajet
+      // + le nom de la ville de départ et d'arrivée
       $query = $em->createQuery("SELECT t.id as id,
         t.nbKm as nbKm,
         t.date as date,
@@ -61,11 +64,13 @@ class DefaultController extends Controller
         WHERE t.villeId = v1.id AND t.villeId1 = v2.id AND t.id = :id")
         ->setParameter('id', $id);
 
+      // On récupère le résultat
       $trajets = $query->getResult();
 
-      //$trajet = $em->getRepository('BackOfficeBundle:Trajet')->find($id);
+      // On récupère les infos de l'internaute + voiture
       $internaute = $em->getRepository('BackOfficeBundle:internaute')->find($trajets[0]['internaute']);
 
+      // On appel la page details.html.twig
       return $this->render('FrontOfficeBundle:Default:details.html.twig',
         array("infos" => $trajets[0],
               "internaute" => $internaute));

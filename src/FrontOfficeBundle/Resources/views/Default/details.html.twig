@@ -1,34 +1,36 @@
 {% extends 'FrontOfficeBundle:Default:layout.html.twig' %}
 {% block content %}
-<div class="ui fluid card">
-  <div class="content">
-    <i class="right floated fas fa-car"></i>
-    <div class="header">
-      Trajet {{ infos.id }}
+<main class="ui container">
+  <section class="ui raised segment">
+    <div class="ui fluid card">
+      <div class="content">
+        <i class="right floated fas fa-car"></i>
+        <div class="header">
+          Trajet {{ infos.id }}
+        </div>
+        <div class="meta">
+          {{ infos.date|date("m/d/Y H:i:s") }}
+        </div>
+        <span class="right floated">Distance : {{ infos.nbKm }} km</span>
+        <div class="description">
+          {{ internaute.prenom }} {{ internaute.nom }}<br>
+          Tél : {{ internaute.tel }}<br>
+          Mail : {{ internaute.mail }}
+        </div>
+      </div>
+      <div class="extra content">
+        Voiture {{ internaute.voitureId.voiture }}<br>
+        Nombre de places : {{ internaute.voitureId.nbPlaces }}
+      </div>
+      <div class="extra content">
+        <span class="right floated">
+          Arrivée : {{ infos.arrivee }}
+        </span>
+        <span>
+          Départ : {{ infos.depart }}
+        </span>
+      </div>
     </div>
-    <div class="meta">
-      {{ infos.date|date("m/d/Y H:i:s") }}
-    </div>
-    <span class="right floated">{{ infos.nbKm }}</span>
-    <div class="description">
-      {{ internaute.prenom }} {{ internaute.nom }}<br>
-      Tél : {{ internaute.tel }}<br>
-      Mail : {{ internaute.mail }}
-    </div>
-  </div>
-  <div class="extra content">
-    Voiture {{ internaute.voitureId.voiture }}<br>
-    Nombre de places : {{ internaute.voitureId.nbPlaces }}
-  </div>
-  <div class="extra content">
-    <span class="right floated">
-      Arrivée : {{ infos.arrivee }}
-    </span>
-    <span>
-      Départ : {{ infos.depart }}
-    </span>
-  </div>
-</div>
-{{ dump(infos) }}
-{{ dump(internaute) }}
+  </section>
+</main>
 {% endblock %}
