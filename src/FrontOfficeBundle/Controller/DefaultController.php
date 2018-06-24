@@ -29,8 +29,8 @@ class DefaultController extends Controller
           $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId), IDENTITY(t.villeId), IDENTITY(t.villeId1)
             FROM BackOfficeBundle:Trajet t,
             BackOfficeBundle:Ville v
-            WHERE v.ville LIKE :search AND
-            (t.villeId = v.id OR t.villeId1 = v.id)")
+            WHERE (v.ville LIKE :search AND t.villeId = v.id)
+            OR (v.ville LIKE :search AND t.villeId1 = v.id)")
             ->setParameter('search', '%'.$search.'%');
 
           $trajets = $query->getResult();
