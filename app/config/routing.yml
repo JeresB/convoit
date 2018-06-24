@@ -5,6 +5,7 @@ back_office_ville:
 
 back_office_voiture:
     resource: "@BackOfficeBundle/Controller/VoitureController.php"
+    prefix:   /adminbo
     type:     annotation
 
 back_office:
