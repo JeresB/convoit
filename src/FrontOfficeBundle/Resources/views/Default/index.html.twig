@@ -42,9 +42,13 @@
               <td>{{ trajet.arrivee }}</td>
             </tr>
         {% endfor %}
+        {% if trajets is empty %}
+            <tr>
+              <td>Pas de résultat</td>
+            </tr>
+        {% endif %}
       </tbody>
     </table>
   </section>
-  {{ dump(trajets) }}
 </main>
 {% endblock %}
