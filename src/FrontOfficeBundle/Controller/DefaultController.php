@@ -49,7 +49,14 @@ class DefaultController extends Controller
     {
       $em = $this->getDoctrine()->getManager();
 
-      $trajet = $em->getRepository('BackOfficeBundle:Trajet')->find($id);
+      $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId), v1.ville, v2.ville
+        FROM BackOfficeBundle:Trajet t,
+        BackOfficeBundle:Ville v1,
+        BackOfficeBundle:Ville v2
+        WHERE t.villeId = v1.id AND t.villeId1 = v2.id");
+
+      $trajet = $query->getResult();
+
       $internaute = $em->getRepository('BackOfficeBundle:internaute')->find($trajet->getInternauteId());
       $voiture = $em->getRepository('BackOfficeBundle:Voiture')->findById($internaute->getVoitureId());
 
