@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="{{ asset('css/covoit.css') }}">
   </head>
   <body>
-    <h2 id="titre" class="ui header">
-      <img class="ui image" src="{{ asset('images/ride_sharing.png')}}">
-      <a href="/">
-        <div class="content">
-          RIDE SHARING
-        </div>
-      </a>
-    </h2>
+    <a href="/">
+      <h2 id="titre" class="ui header">
+        <img class="ui image" src="{{ asset('images/ride_sharing.png')}}">
+          <div class="content">
+            RIDE SHARING
+          </div>
+      </h2>
+    </a>
     {% block content %}{% endblock %}
   </body>
 </html>
