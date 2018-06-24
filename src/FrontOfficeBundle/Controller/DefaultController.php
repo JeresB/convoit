@@ -54,7 +54,20 @@ class DefaultController extends Controller
 
 
         } else {
-          $trajets = $em->getRepository('BackOfficeBundle:Trajet')->findAll();
+          $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId) as internaute, vd.ville as depart, va.ville as arrivee
+            FROM BackOfficeBundle:Trajet t,
+            BackOfficeBundle:Ville vd,
+            BackOfficeBundle:Ville va
+            WHERE
+            AND vd.id = t.villeId AND va.id = t.villeId1");
+
+          $trajets = $query->getResult();
+
+          foreach ($trajets as $key => $trajet) {
+            // On récupère les infos de l'internaute
+            $internaute = $em->getRepository('BackOfficeBundle:internaute')->find($trajet['internauteId']);
+            $trajets[$key]['internaute'] = $internaute;
+          }
         }
 
         return $this->render('FrontOfficeBundle:Default:index.html.twig',
