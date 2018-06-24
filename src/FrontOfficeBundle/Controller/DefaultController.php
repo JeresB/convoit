@@ -8,6 +8,9 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
+        $search = $this->get('request')->request->get('search');
+        
+
         $em = $this->getDoctrine()->getManager();
 
         $trajets = $em->getRepository('BackOfficeBundle:Trajet')->findAll();
