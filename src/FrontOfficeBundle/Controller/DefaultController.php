@@ -33,7 +33,16 @@ class DefaultController extends Controller
             OR (v.ville LIKE :search AND t.villeId1 = v.id)")
             ->setParameter('search', '%'.$search.'%');
 
-          $trajets = $query->getResult();
+          $trajets_result = $query->getResult();
+
+          // Pour eviter les doublons
+          // Exemple une recherche avec 'B' (ville départ Brest, ville d'arrivée Saint-Brieuc)
+          // Dans ce cas la le même trajet se retrouve en doublon
+          foreach ($trajets_result as $trajet) {
+            if(!in_array($trajet, $trajets)){
+                $trajets[] = $trajet;
+            }
+          }
         } else {
           $trajets = $em->getRepository('BackOfficeBundle:Trajet')->findAll();
         }
