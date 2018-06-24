@@ -64,7 +64,7 @@ class DefaultController extends Controller
 
           foreach ($trajets as $key => $trajet) {
             // On récupère les infos de l'internaute
-            $internaute = $em->getRepository('BackOfficeBundle:internaute')->find($trajet['internauteId']);
+            $internaute = $em->getRepository('BackOfficeBundle:internaute')->find($trajet['internaute']);
             $trajets[$key]['internaute'] = $internaute;
           }
         }
