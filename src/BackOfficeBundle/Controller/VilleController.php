@@ -26,7 +26,7 @@ class VilleController extends Controller
 
         $villes = $em->getRepository('BackOfficeBundle:Ville')->findAll();
 
-        return $this->render('ville/index.html.twig', array(
+        return $this->render('BackOfficebundle:ville:index.html.twig', array(
             'villes' => $villes,
         ));
     }
