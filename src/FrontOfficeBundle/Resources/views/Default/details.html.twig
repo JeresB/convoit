@@ -4,25 +4,25 @@
   <div class="content">
     <i class="right floated fas fa-car"></i>
     <div class="header">
-      Trajet
+      Trajet {{ infos.id }}
     </div>
     <div class="meta">
-      date
+      {{ infos.date|date("m/d/Y") }}
     </div>
-    <span class="rigth floated"></span>
+    <span class="rigth floated">{{ infos.nbKm }}</span>
     <div class="description">
-      Internaute
+      {{ internaute.prenom }} {{ internaute.prenom }}
     </div>
   </div>
   <div class="extra content">
-    voiture
+    {{ internaute.voitureId.voiture }}
   </div>
   <div class="extra content">
     <span class="right floated">
-      Départ
+      {{ infos.depart }}
     </span>
     <span>
-      Arrivée
+      {{ infos.arrivee }}
     </span>
   </div>
 </div>

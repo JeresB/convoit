@@ -61,15 +61,14 @@ class DefaultController extends Controller
         WHERE t.villeId = v1.id AND t.villeId1 = v2.id AND t.id = :id")
         ->setParameter('id', $id);
 
-      $trajets = $query->getResult();
-      $trajet = $trajets[0];
+      $trajet = $query->getResult();
 
       $trajet = $em->getRepository('BackOfficeBundle:Trajet')->find($id);
       $internaute = $em->getRepository('BackOfficeBundle:internaute')->find($trajet->getInternauteId());
       $voiture = $em->getRepository('BackOfficeBundle:Voiture')->findById($internaute->getVoitureId());
 
       return $this->render('FrontOfficeBundle:Default:details.html.twig',
-        array("infos" => $trajets[0],
+        array("infos" => $trajet[0],
               "internaute" => $internaute,
               "voiture" => $voiture));
     }
