@@ -55,7 +55,8 @@ class DefaultController extends Controller
         BackOfficeBundle:Ville v2
         WHERE t.villeId = v1.id AND t.villeId1 = v2.id");
 
-      $trajet = $query->getResult();
+      $trajets = $query->getResult();
+      $trajet = $trajets[0];
 
       $internaute = $em->getRepository('BackOfficeBundle:internaute')->find($trajet->getInternauteId());
       $voiture = $em->getRepository('BackOfficeBundle:Voiture')->findById($internaute->getVoitureId());
