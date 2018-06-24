@@ -61,7 +61,7 @@ class DefaultController extends Controller
         WHERE t.villeId = v1.id AND t.villeId1 = v2.id AND t.id = :id")
         ->setParameter('id', $id);
 
-      $trajet = $query->getResult();
+      $trajets = $query->getResult();
       $trajet = $trajets[0];
 
       $trajet = $em->getRepository('BackOfficeBundle:Trajet')->find($id);
