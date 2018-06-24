@@ -48,11 +48,14 @@ class DefaultController extends Controller
     public function detailsAction($id)
     {
       $em = $this->getDoctrine()->getManager();
+
       $trajet = $em->getRepository('BackOfficeBundle:Trajet')->find($id);
       $internaute = $em->getRepository('BackOfficeBundle:internaute')->find($trajet->getInternauteId());
+      $voiture = $em->getRepository('BackOfficeBundle:Voiture')->find($internaute->getVoitureId());
 
       return $this->render('FrontOfficeBundle:Default:details.html.twig',
         array("infos" => $trajet,
-              "internaute" => $internaute));
+              "internaute" => $internaute,
+              "voiture" => $voiture));
     }
 }
