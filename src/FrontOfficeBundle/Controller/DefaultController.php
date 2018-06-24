@@ -12,15 +12,19 @@ class DefaultController extends Controller
 {
     public function indexAction(Request $request)
     {
+        $em = $this->getDoctrine()->getManager();
+        $text = '';
+
         $form = $this->createFormBuilder()
           ->add('search', TextType::class)
           ->add('Rechercher', SubmitType::class)
           ->getForm();
 
-          $em = $this->getDoctrine()->getManager();
         $form->handleRequest($request);
+
         if ($form->isSubmitted() && $form->isValid()) {
           $search = $form["search"]->getData();
+          $text = 'Résultats de la recherche : '.$search;
 
           $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId), IDENTITY(t.villeId), IDENTITY(t.villeId1)
             FROM BackOfficeBundle:Trajet t,
@@ -30,17 +34,14 @@ class DefaultController extends Controller
             ->setParameter('search', '%'.$search.'%');
 
           $trajets = $query->getResult();
-          //return $this->redirectToRoute('search_homepage', array('search' => $search, 'form' => $form->createView()));
         } else {
-        $trajets = $em->getRepository('BackOfficeBundle:Trajet')->findAll();
+          $trajets = $em->getRepository('BackOfficeBundle:Trajet')->findAll();
         }
-
-
-
 
         return $this->render('FrontOfficeBundle:Default:index.html.twig',
           array("trajets" => $trajets,
-                "form" => $form->createView()
+                "form" => $form->createView(),
+                "text" => $text
           ));
     }
 
@@ -51,22 +52,5 @@ class DefaultController extends Controller
 
       return $this->render('FrontOfficeBundle:Default:details.html.twig',
         array("infos" => $trajet));
-    }
-
-    public function searchAction($search)
-    {
-      $em = $this->getDoctrine()->getManager();
-      $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId), IDENTITY(t.villeId), IDENTITY(t.villeId1)
-        FROM BackOfficeBundle:Trajet t,
-        BackOfficeBundle:Ville v
-        WHERE v.ville LIKE :search AND
-        t.villeId = v.id")
-        ->setParameter('search', '%'.$search.'%');
-
-      $trajets = $query->getResult();
-
-      return $this->render('FrontOfficeBundle:Default:index.html.twig',
-        array("trajets" => $trajets,
-      ));
     }
 }

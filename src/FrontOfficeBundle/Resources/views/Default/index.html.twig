@@ -11,6 +11,13 @@
         {{ form_end(form) }}
       </div>
     </div>
+    {% if text|length > 0 %}
+    <div class="ui message">
+      <div class="header">
+        {{ text }}
+      </div>
+    </div>
+    {% endif %}
     <table class="ui selectable celled table">
       <thead>
         <tr>
