@@ -14,7 +14,7 @@ class DefaultController extends Controller
     {
         $form = $this->createFormBuilder()
           ->add('search', TextType::class)
-          ->add('\f002', SubmitType::class)
+          ->add('&#xf000;', SubmitType::class)
           ->getForm();
 
 
