@@ -35,8 +35,8 @@
         {% for trajet in trajets %}
             <tr>
               <td><a href="/{{ trajet.id}}">Trajet {{ trajet.id }}</a></td>
-              <td>{{ trajet.id }}</td>
-              <td>{{ trajet.id }}</td>
+              <td>{{ trajet.nbKm }}</td>
+              <td>{{ trajet.date|date("m/d/Y H:i:s") }}</td>
               <td>{{ trajet.id }}</td>
               <td>{{ trajet.id }}</td>
               <td>{{ trajet.id }}</td>
@@ -45,5 +45,6 @@
       </tbody>
     </table>
   </section>
+  {{ dump(trajets) }}
 </main>
 {% endblock %}
