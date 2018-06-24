@@ -20,6 +20,7 @@ class DefaultController extends Controller
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
           $data = $form->getData();
+          
           return $this->redirectToRoute('search_homepage/search/'.$data[0]);
         }
 
