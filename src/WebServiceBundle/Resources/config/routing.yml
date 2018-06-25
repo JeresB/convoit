@@ -6,6 +6,7 @@ web_service_search_homepage:
     path:     /{search}
     defaults: { _controller: WebServiceBundle:Default:search }
 
+
 web_service_details_homepage:
     path:     /details/{id}
     defaults: { _controller: WebServiceBundle:Default:details }
