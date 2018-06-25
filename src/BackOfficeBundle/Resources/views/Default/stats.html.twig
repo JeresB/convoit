@@ -2,11 +2,11 @@
 {% block content %}
 <main class="ui container">
   <section class="ui raised segment">
+    <h4 class="ui horizontal divider header">
+      <i class="bar chart icon"></i>
+      Statistiques
+    </h4>
     <div class="ui grid">
-      <h4 class="ui horizontal divider header">
-        <i class="bar chart icon"></i>
-        Statistiques
-      </h4>
       <div class="ui card four wide column">
         <div class="content">
           <span class="header">Nombre d'internautes</span>
@@ -20,6 +20,22 @@
           <span class="header">Nombre d'internautes à plus de 2 trajets</span>
           <div class="description">
             {{ dump(nb_internaute_trajet_2) }}
+          </div>
+        </div>
+      </div>
+      <div class="ui card four wide column">
+        <div class="content">
+          <span class="header">Top 5 villes de départs</span>
+          <div class="description">
+            {{ dump(top_depart) }}
+          </div>
+        </div>
+      </div>
+      <div class="ui card four wide column">
+        <div class="content">
+          <span class="header">Top 5 villes d'arrivées</span>
+          <div class="description">
+            {{ dump(top_arrivee) }}
           </div>
         </div>
       </div>
