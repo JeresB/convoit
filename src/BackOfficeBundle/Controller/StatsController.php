@@ -10,7 +10,7 @@ class StatsController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $query = $em->createQuery("SELECT count(id) as total FROM BackOfficeBundle:internaute");
+        $query = $em->createQuery("SELECT count(i.id) as total FROM BackOfficeBundle:internaute i");
 
         $resultat = $query->getResult();
 
