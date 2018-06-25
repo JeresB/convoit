@@ -25,7 +25,7 @@ class StatsController extends Controller
         $resultat = $query->getResult();
         $top_depart = $resultat;
 
-        $query = $em->createQuery("SELECT count(t) total FROM BackOfficeBundle:Trajet t group by t.villeId1 order by total desc")->setMaxResults(5);
+        $query = $em->createQuery("SELECT IDENTITY(t.villeId1), count(t) total FROM BackOfficeBundle:Trajet t group by t.villeId1 order by total desc")->setMaxResults(5);
 
         $resultat = $query->getResult();
         $top_arrivee = $resultat;
