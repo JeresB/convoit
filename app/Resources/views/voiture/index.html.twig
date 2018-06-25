@@ -24,10 +24,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('voiture_show', { 'id': voiture.id }) }}">show</a>
+                            <a href="{{ path('voiture_show', { 'id': voiture.id }) }}">Détails</a>
                         </li>
                         <li>
-                            <a href="{{ path('voiture_edit', { 'id': voiture.id }) }}">edit</a>
+                            <a href="{{ path('voiture_edit', { 'id': voiture.id }) }}">Edition</a>
                         </li>
                     </ul>
                 </td>
@@ -36,9 +36,5 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('voiture_new') }}">Create a new voiture</a>
-        </li>
-    </ul>
+    <a class="ui primary button" href="{{ path('voiture_new') }}">Create a new voiture</a>
 {% endblock %}
