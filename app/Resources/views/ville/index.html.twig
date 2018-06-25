@@ -1,41 +1,44 @@
 {% extends 'BackOfficeBundle:Default:layout.html.twig' %}
 
 {% block content %}
-    <h1>Villes list</h1>
+<main class="ui container">
+  <section class="ui raised segment">
+    <h1 class="ui horizontal divider header">
+      <i class="home icon"></i>
+      Liste Ville
+    </h1>
 
     <table class="ui selectable celled table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Ville</th>
-                <th>Cp</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Ville</th>
+          <th>Cp</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
         {% for ville in villes %}
-            <tr>
-                <td><a href="{{ path('ville_show', { 'id': ville.id }) }}">{{ ville.id }}</a></td>
-                <td>{{ ville.ville }}</td>
-                <td>{{ ville.cp }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('ville_show', { 'id': ville.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('ville_edit', { 'id': ville.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
+        <tr>
+          <td><a href="{{ path('ville_show', { 'id': ville.id }) }}">{{ ville.id }}</a></td>
+          <td>{{ ville.ville }}</td>
+          <td>{{ ville.cp }}</td>
+          <td>
+            <ul>
+              <li>
+                <a href="{{ path('ville_show', { 'id': ville.id }) }}">Détails</a>
+              </li>
+              <li>
+                <a href="{{ path('ville_edit', { 'id': ville.id }) }}">Edition</a>
+              </li>
+            </ul>
+          </td>
+        </tr>
         {% endfor %}
-        </tbody>
+      </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('ville_new') }}">Create a new ville</a>
-        </li>
-    </ul>
+    <a class="ui primary button" href="{{ path('ville_new') }}">Créer une nouvelle ville</a>
+  </section>
+</main>
 {% endblock %}

@@ -1,36 +1,35 @@
 {% extends 'BackOfficeBundle:Default:layout.html.twig' %}
 
 {% block content %}
-    <h1>Ville</h1>
+<main class="ui container">
+  <section class="ui raised segment">
+    <h1 class="ui horizontal divider header">
+      <i class="home icon"></i>
+      Ville
+    </h1>
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ ville.id }}</td>
-            </tr>
-            <tr>
-                <th>Ville</th>
-                <td>{{ ville.ville }}</td>
-            </tr>
-            <tr>
-                <th>Cp</th>
-                <td>{{ ville.cp }}</td>
-            </tr>
-        </tbody>
+    <table class="ui selectable celled table">
+      <tbody>
+          <tr>
+              <th>Id</th>
+              <td>{{ ville.id }}</td>
+          </tr>
+          <tr>
+              <th>Ville</th>
+              <td>{{ ville.ville }}</td>
+          </tr>
+          <tr>
+              <th>Cp</th>
+              <td>{{ ville.cp }}</td>
+          </tr>
+      </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('ville_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('ville_edit', { 'id': ville.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    {{ form_start(delete_form) }}
+    <input class="ui red right floated button" type="submit" value="Supprimer">
+    {{ form_end(delete_form) }}
+    <a class="ui primary button" href="{{ path('ville_index') }}">Retourner à la liste</a>
+    <a class="ui primary button" href="{{ path('ville_edit', { 'id': ville.id }) }}">Edition</a>
+  </section>
+</main>
 {% endblock %}
