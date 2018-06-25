@@ -1,16 +1,25 @@
 {% extends 'BackOfficeBundle:Default:layout.html.twig' %}
 
 {% block content %}
-    <h1>Internaute creation</h1>
+<main class="ui container">
+  <section class="ui raised segment">
+    <h1 class="ui horizontal divider header">
+      <i class="user icon"></i>
+      Création Internaute
+    </h1>
 
     {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('internaute_index') }}">Back to the list</a>
-        </li>
-    </ul>
+    {{ form_widget(form) }}
+    <div class="ui hidden divider"></div>
+    <div class="ui grid">
+      <div class="six wide column">
+        <input class="ui primary button" type="submit" value="Creer" />
+        {{ form_end(form) }}
+      </div>
+      <div class="six wide column">
+        <a class="ui primary button" href="{{ path('internaute_index') }}">Retourner à la liste</a>
+      </div>
+    </div>
+  </section>
+</main>
 {% endblock %}

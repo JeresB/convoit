@@ -1,20 +1,25 @@
 {% extends 'BackOfficeBundle:Default:layout.html.twig' %}
 
 {% block content %}
-    <h1>Internautes list</h1>
+<main class="ui container">
+  <section class="ui raised segment">
+    <h1 class="ui horizontal divider header">
+      <i class="user icon"></i>
+      Liste Internaute
+    </h1>
 
     <table class="ui selectable celled table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Prenom</th>
-                <th>Tel</th>
-                <th>Mail</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nom</th>
+          <th>Prenom</th>
+          <th>Tel</th>
+          <th>Mail</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
         {% for internaute in internautes %}
             <tr>
                 <td><a href="{{ path('internaute_show', { 'id': internaute.id }) }}">{{ internaute.id }}</a></td>
@@ -34,12 +39,10 @@
                 </td>
             </tr>
         {% endfor %}
-        </tbody>
+      </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('internaute_new') }}">Create a new internaute</a>
-        </li>
-    </ul>
+    <a class="ui primary button" href="{{ path('internaute_new') }}">Créer un nouvel internaute</a>
+  </section>
+</main>
 {% endblock %}
