@@ -9,8 +9,10 @@
     </h1>
     <div class="ui grid">
       <div class="four wide column">
-        {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
+        <div class="">
+          {{ form_start(edit_form) }}
+          {{ form_widget(edit_form) }}    
+        </div>
         <input class="fluid ui primary button" type="submit" value="Edition" />
         {{ form_end(edit_form) }}
       </div>
