@@ -12,6 +12,9 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('WebServiceBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $trajets = $em->getRepository('BackOfficeBundle:Trajet')->findAll();
+
+        return $this->json(array('trajets' => $trajets));
     }
 }

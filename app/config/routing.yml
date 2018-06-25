@@ -1,8 +1,3 @@
-web_service:
-    resource: "@WebServiceBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
 back_office_internaute:
     resource: "@BackOfficeBundle/Controller/internauteController.php"
     prefix:   /adminbo
@@ -21,6 +16,11 @@ back_office_voiture:
 back_office:
     resource: "@BackOfficeBundle/Resources/config/routing.yml"
     prefix:   /adminbo
+
+web_service:
+    resource: "@WebServiceBundle/Controller/"
+    type:     annotation
+    prefix:   /api
 
 front_office:
     resource: "@FrontOfficeBundle/Resources/config/routing.yml"
