@@ -22,9 +22,7 @@ class DefaultController extends Controller
           WHERE vd.id = t.villeId AND va.id = t.villeId1 AND t.internauteId = i.id");
 
         $trajets = $query->getResult();
-      //  $trajets = $em->getRepository('BackOfficeBundle:Trajet')->findAll();
 
-        return $this->json(array('trajets' => $trajets[0]));
-      //  return $this->render('WebServiceBundle:Default:index.html.twig', array("trajets" => $trajets));
+        return $this->json(array('trajets' => $trajets));
     }
 }
