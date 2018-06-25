@@ -55,10 +55,10 @@ class DefaultController extends Controller
         BackOfficeBundle:Ville v,
         BackOfficeBundle:Ville vd,
         BackOfficeBundle:Ville va
-        WHERE t.id = :id AND vd.id = t.villeId AND va.id = t.villeId1 AND i.id = t.internauteId")
+        WHERE t.id = :id AND vd.id = t.villeId AND va.id = t.villeId1 AND i.id = t.internauteId LIMIT 1")
         ->setParameter('id', $id);
 
       $trajets = $query->getResult();
-      return $this->json(array('trajets' => $trajets));
+      return $this->json(array('trajets' => $trajets[0]));
     }
 }
