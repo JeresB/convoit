@@ -15,6 +15,7 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $trajets = $em->getRepository('BackOfficeBundle:Trajet')->findAll();
 
-        return $this->json(array('trajets' => $trajets));
+        //return $this->json(array('trajets' => $trajets));
+        return $this->render('WebServiceBundle:Default:index.html.twig');
     }
 }
