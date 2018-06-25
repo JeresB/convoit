@@ -55,10 +55,8 @@ class DefaultController extends Controller
         BackOfficeBundle:Ville v,
         BackOfficeBundle:Ville vd,
         BackOfficeBundle:Ville va
-        WHERE ((v.ville LIKE :search AND t.villeId = v.id)
-        OR (v.ville LIKE :search AND t.villeId1 = v.id))
-        AND vd.id = t.villeId AND va.id = t.villeId1 AND i.id = t.internauteId")
-        ->setParameter('search', '%'.$search.'%');
+        WHERE t.i = :id, vd.id = t.villeId AND va.id = t.villeId1 AND i.id = t.internauteId")
+        ->setParameter('id', $id);
 
       $trajets = $query->getResult();
       return $this->json(array('trajets' => $trajets));
