@@ -44,4 +44,23 @@ class DefaultController extends Controller
       $trajets = $query->getResult();
       return $this->json(array('trajets' => $trajets));
     }
+
+    public function detailsAction($id)
+    {
+      $em = $this->getDoctrine()->getManager();
+
+      $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, i.prenom, i.nom, i.tel, i.mail, vd.ville as depart, vd.cp as depart_cp, va.ville as arrivee, vd.cp as arrivee_cp
+        FROM BackOfficeBundle:Trajet t,
+        BackOfficeBundle:internaute i,
+        BackOfficeBundle:Ville v,
+        BackOfficeBundle:Ville vd,
+        BackOfficeBundle:Ville va
+        WHERE ((v.ville LIKE :search AND t.villeId = v.id)
+        OR (v.ville LIKE :search AND t.villeId1 = v.id))
+        AND vd.id = t.villeId AND va.id = t.villeId1 AND i.id = t.internauteId")
+        ->setParameter('search', '%'.$search.'%');
+
+      $trajets = $query->getResult();
+      return $this->json(array('trajets' => $trajets));
+    }
 }
