@@ -49,13 +49,20 @@ class DefaultController extends Controller
     {
       $em = $this->getDoctrine()->getManager();
 
-      $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, i.prenom, i.nom, i.tel, i.mail, vd.ville as depart, vd.cp as depart_cp, va.ville as arrivee, vd.cp as arrivee_cp
+      $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, i.prenom, i.nom, i.tel, i.mail,
+        vd.ville as depart, vd.cp as depart_cp, va.ville as arrivee, vd.cp as arrivee_cp,
+        voiture.voiture, voiture.nbPlaces
         FROM BackOfficeBundle:Trajet t,
         BackOfficeBundle:internaute i,
+        BackOfficeBundle:Voiture voiture,
         BackOfficeBundle:Ville v,
         BackOfficeBundle:Ville vd,
         BackOfficeBundle:Ville va
-        WHERE t.id = :id AND vd.id = t.villeId AND va.id = t.villeId1 AND i.id = t.internauteId")
+        WHERE t.id = :id
+        AND vd.id = t.villeId
+        AND va.id = t.villeId1
+        AND i.id = t.internauteId
+        AND voiture.id = i.voitureId")
         ->setParameter('id', $id);
 
       $trajets = $query->getResult();
