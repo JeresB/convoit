@@ -1,40 +1,44 @@
 {% extends 'BackOfficeBundle:Default:layout.html.twig' %}
 
 {% block content %}
+<main class="ui container">
+  <section class="ui raised segment">
     <h1 class="ui horizontal divider header">
       <i class="car icon"></i>
       Liste Voiture
     </h1>
 
     <table class="ui selectable celled table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Voiture</th>
-                <th>Nbplaces</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Voiture</th>
+          <th>Nbplaces</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
         {% for voiture in voitures %}
-            <tr>
-                <td><a href="{{ path('voiture_show', { 'id': voiture.id }) }}">{{ voiture.id }}</a></td>
-                <td>{{ voiture.voiture }}</td>
-                <td>{{ voiture.nbPlaces }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('voiture_show', { 'id': voiture.id }) }}">Détails</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('voiture_edit', { 'id': voiture.id }) }}">Edition</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
+        <tr>
+          <td><a href="{{ path('voiture_show', { 'id': voiture.id }) }}">{{ voiture.id }}</a></td>
+          <td>{{ voiture.voiture }}</td>
+          <td>{{ voiture.nbPlaces }}</td>
+          <td>
+            <ul>
+              <li>
+                <a href="{{ path('voiture_show', { 'id': voiture.id }) }}">Détails</a>
+              </li>
+              <li>
+                <a href="{{ path('voiture_edit', { 'id': voiture.id }) }}">Edition</a>
+              </li>
+            </ul>
+          </td>
+        </tr>
         {% endfor %}
-        </tbody>
+      </tbody>
     </table>
 
-    <a class="ui primary button rigth aligned" href="{{ path('voiture_new') }}">Create a new voiture</a>
+    <a class="ui primary button" href="{{ path('voiture_new') }}">Create a new voiture</a>
+  </section>
+</main>
 {% endblock %}
