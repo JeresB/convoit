@@ -28,7 +28,7 @@
     <a class="ui primary button" href="{{ path('voiture_index') }}">Retourner à la liste</a>
     <a class="ui primary button" href="{{ path('voiture_edit', { 'id': voiture.id }) }}">Edition</a>
     {{ form_start(delete_form) }}
-    <input class="prompt" type="submit" value="Supprimer">
+    <input class="ui input" type="submit" value="Supprimer">
     {{ form_end(delete_form) }}
   </section>
 </main>
