@@ -1,5 +1,6 @@
 back_office_internaute:
     resource: "@BackOfficeBundle/Controller/internauteController.php"
+    prefix:   /adminbo
     type:     annotation
 
 back_office_ville:
