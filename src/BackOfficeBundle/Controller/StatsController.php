@@ -20,7 +20,7 @@ class StatsController extends Controller
         $resultat = $query->getResult();
         $nb_internaute_trajet_2 = $resultat;
 
-        $query = $em->createQuery("SELECT count(t) total FROM BackOfficeBundle:Trajet t group by t.villeId order by total desc")->setMaxResults(5);
+        $query = $em->createQuery("SELECT t.villeId, count(t) total FROM BackOfficeBundle:Trajet t group by t.villeId order by total desc")->setMaxResults(5);
 
         $resultat = $query->getResult();
         $top_depart = $resultat;
