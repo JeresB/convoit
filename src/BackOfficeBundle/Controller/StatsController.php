@@ -15,6 +15,6 @@ class StatsController extends Controller
         $resultat = $query->getResult();
 
         return $this->render('BackOfficeBundle:Default:stats.html.twig',
-          array("nb_internaute" => $resultat));
+          array("nb_internaute" => $resultat[0]['total']));
     }
 }
