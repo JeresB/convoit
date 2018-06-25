@@ -1,5 +1,15 @@
 {% extends 'BackOfficeBundle:Default:layout.html.twig' %}
 {% block content %}
-Hello World from back office Statistiques !
-{{ dump(nb_internaute) }}
+<h4 class="ui horizontal divider header">
+  <i class="bar chart icon"></i>
+  Statistiques
+</h4>
+<div class="ui card">
+  <div class="content">
+    <span class="header">Nombre d'internautes</span>
+    <div class="description">
+      {{ nb_internaute }}
+    </div>
+  </div>
+</div>
 {% endblock %}
