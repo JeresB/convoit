@@ -7,16 +7,21 @@
       <i class="car icon"></i>
       Edition Voiture
     </h1>
+    <div class="ui grid">
+      <div class="four wide column">
+        {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <input class="fluid ui primary button" type="submit" value="Edition" />
+        {{ form_end(edit_form) }}
+      </div>
+      <div class="four wide column">
+        <a class="fluid ui primary button" href="{{ path('voiture_index') }}">Retourner à la liste</a>
+      </div>
 
-    {{ form_start(edit_form) }}
-    {{ form_widget(edit_form) }}
-    <input class="ui primary button" type="submit" value="Edition" />
-    {{ form_end(edit_form) }}
-
-    <a class="ui primary button" href="{{ path('voiture_index') }}">Retourner à la liste</a>
-    {{ form_start(delete_form) }}
-    <input class="ui red button" type="submit" value="Supprimer">
-    {{ form_end(delete_form) }}
+      {{ form_start(delete_form) }}
+      <input class="ui red right floated button" type="submit" value="Supprimer">
+      {{ form_end(delete_form) }}
+    </div>
   </section>
 </main>
 {% endblock %}
