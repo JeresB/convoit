@@ -15,7 +15,7 @@ class StatsController extends Controller
         $resultat = $query->getResult();
         $nb_internaute = $resultat[0]['total'];
 
-        $query = $em->createQuery("SELECT internaute_id, count(t.id) Total FROM BackOfficeBundle:Trajet t group by t.internauteId having count(t.id) > 2");
+        $query = $em->createQuery("SELECT t.internauteId, count(t.id) Total FROM BackOfficeBundle:Trajet t group by t.internauteId having count(t.id) > 2");
 
         $resultat = $query->getResult();
 
