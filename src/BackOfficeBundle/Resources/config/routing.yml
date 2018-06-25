@@ -1,3 +1,7 @@
 back_office_homepage:
     path:     /
     defaults: { _controller: BackOfficeBundle:Default:index }
+
+stats_homepage:
+    path:     /stats
+    defaults: { _controller: BackOfficeBundle:Stats:index }
