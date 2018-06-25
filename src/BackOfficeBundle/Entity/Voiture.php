@@ -93,5 +93,9 @@ class Voiture
     {
         return $this->nbPlaces;
     }
-}
 
+    public function __toString()
+    {
+      return $this->voiture;
+    }
+}

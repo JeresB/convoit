@@ -93,5 +93,9 @@ class Ville
     {
         return $this->cp;
     }
-}
 
+    public function __toString()
+    {
+      return $this->cp.' '.$this->ville;
+    }
+}
