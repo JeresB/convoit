@@ -18,8 +18,7 @@ back_office:
     prefix:   /adminbo
 
 web_service:
-    resource: "@WebServiceBundle/Controller/"
-    type:     annotation
+    resource: "@WebServiceBundle/Resources/config/routing.yml"
     prefix:   /api
 
 front_office:
