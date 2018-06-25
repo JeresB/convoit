@@ -16,6 +16,6 @@ class DefaultController extends Controller
         $trajets = $em->getRepository('BackOfficeBundle:Trajet')->findAll();
 
         //return $this->json(array('trajets' => $trajets));
-        return $this->render('WebServiceBundle:Default:index.html.twig');
+        return $this->render('WebServiceBundle:Default:index.html.twig', array("trajets" => $trajets));
     }
 }
