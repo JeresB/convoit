@@ -10,10 +10,16 @@
 
     {{ form_start(form) }}
     {{ form_widget(form) }}
-    <input class="ui primary button" type="submit" value="Creer" />
-    {{ form_end(form) }}
-
-    <a class="ui primary button" href="{{ path('voiture_index') }}">Retourner à la liste</a>
+    <div class="ui hidden divider"></div>
+    <div class="ui grid">
+      <div class="six wide column">
+        <input class="ui primary button" type="submit" value="Creer" />
+        {{ form_end(form) }}
+      </div>
+      <div class="six wide column">
+        <a class="ui primary button" href="{{ path('voiture_index') }}">Retourner à la liste</a>
+      </div>
+    </div>
   </section>
 </main>
 {% endblock %}
