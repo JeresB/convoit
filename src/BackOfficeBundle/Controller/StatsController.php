@@ -18,7 +18,7 @@ class StatsController extends Controller
         $query = $em->createQuery("SELECT count(t.internauteId) Total FROM BackOfficeBundle:Trajet t group by t.internauteId having count(t.internauteId) > 2");
 
         $resultat = $query->getResult();
-        $nb_internaute_trajet_2 = $resultat[0]['total'];
+        $nb_internaute_trajet_2 = $resultat;
 
         return $this->render('BackOfficeBundle:Default:stats.html.twig',
           array("nb_internaute" => $nb_internaute,
