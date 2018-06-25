@@ -22,6 +22,6 @@ class StatsController extends Controller
 
         return $this->render('BackOfficeBundle:Default:stats.html.twig',
           array("nb_internaute" => $nb_internaute,
-                "nb_internaute_trajet_2" => $resultat));
+                "nb_internaute_trajet_2" => $nb_internaute_trajet_2));
     }
 }
