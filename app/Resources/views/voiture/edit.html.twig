@@ -1,24 +1,28 @@
 {% extends 'BackOfficeBundle:Default:layout.html.twig' %}
 
 {% block content %}
+<main class="ui container">
+  <section class="ui raised segment">
     <h1 class="ui horizontal divider header">
       <i class="car icon"></i>
       Edition Voiture
     </h1>
 
     {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
+    {{ form_widget(edit_form) }}
+    <input type="submit" value="Edition" />
     {{ form_end(edit_form) }}
 
     <ul>
-        <li>
-            <a href="{{ path('voiture_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
+      <li>
+        <a href="{{ path('voiture_index') }}">Retourner à la liste</a>
+      </li>
+      <li>
+        {{ form_start(delete_form) }}
+        <input type="submit" value="Supprimer">
+        {{ form_end(delete_form) }}
+      </li>
     </ul>
+  </section>
+</main>
 {% endblock %}

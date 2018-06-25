@@ -1,19 +1,19 @@
 {% extends 'BackOfficeBundle:Default:layout.html.twig' %}
 
 {% block content %}
+<main class="ui container">
+  <section class="ui raised segment">
     <h1 class="ui horizontal divider header">
       <i class="car icon"></i>
       Création Voiture
     </h1>
 
     {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+    {{ form_widget(form) }}
+    <input type="submit" value="Creer" />
     {{ form_end(form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('voiture_index') }}">Back to the list</a>
-        </li>
-    </ul>
+    <a class="ui primary button" href="{{ path('voiture_index') }}">Retourner à la liste</a>
+  </section>
+</main>
 {% endblock %}

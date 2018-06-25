@@ -23,17 +23,9 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('voiture_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('voiture_edit', { 'id': voiture.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    <a class="ui primary button" href="{{ path('voiture_index') }}">Retourner à la liste</a>
+    <a href="{{ path('voiture_edit', { 'id': voiture.id }) }}">Edition</a>
+    {{ form_start(delete_form) }}
+        <input type="submit" value="Supprimer">
+    {{ form_end(delete_form) }}
 {% endblock %}
