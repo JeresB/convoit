@@ -7,12 +7,10 @@
       <i class="car icon"></i>
       Edition Voiture
     </h1>
+    {{ form_start(edit_form) }}
+    {{ form_widget(edit_form) }}
     <div class="ui grid">
       <div class="four wide column">
-        <div class="">
-          {{ form_start(edit_form) }}
-          {{ form_widget(edit_form) }}    
-        </div>
         <input class="fluid ui primary button" type="submit" value="Edition" />
         {{ form_end(edit_form) }}
       </div>
