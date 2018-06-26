@@ -10,9 +10,9 @@
         {{ form_start(form) }}
           {{ form_widget(form.search, { 'attr': {'class': 'ui input'} }) }}
           <div class="ui hidden divider"></div>
-          <input class="ui primary button" type="submit" name="searchall" value="Rechercher" />
-          <input class="ui primary button" type="submit" name="searchd" value="Rechercher sur la ville de départ" />
-          <input class="ui primary button" type="submit" name="searcha" value="Rechercher sur la ville d'arrivée" />
+          {{ form_widget(form.searchall, { 'attr': {'class': 'ui primary button'} }) }}
+          {{ form_widget(form.searchd, { 'attr': {'class': 'ui primary button'} }) }}
+          {{ form_widget(form.searcha, { 'attr': {'class': 'ui primary button'} }) }}
         {{ form_end(form) }}
       </div>
     </div>
