@@ -32,7 +32,11 @@
           <div class="content">
             <span class="header">Top 5 villes de départs</span>
             <div class="description">
-              {{ dump(top_depart) }}
+              <ul>
+                {% for ville in top_depart %}
+                <li>{{ ville.ville }} {{ ville.cp}}</li>
+                {% endfor %}
+              </ul>
             </div>
           </div>
         </div>
