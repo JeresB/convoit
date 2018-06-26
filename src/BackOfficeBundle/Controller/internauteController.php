@@ -67,13 +67,15 @@ class internauteController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $voiture = $em->getRepository('BackOfficeBundle:Voiture')->findById($internaute->getVoitureId());
+        $ville = $em->getRepository('BackOfficeBundle:Ville')->findById($internaute->getVilleId());
 
         $deleteForm = $this->createDeleteForm($internaute);
 
         return $this->render('internaute/show.html.twig', array(
             'internaute' => $internaute,
             'delete_form' => $deleteForm->createView(),
-            'voiture' => $voiture
+            'voiture' => $voiture,
+            'ville' => $ville
         ));
     }
 
