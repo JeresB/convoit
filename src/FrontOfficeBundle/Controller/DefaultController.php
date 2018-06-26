@@ -97,6 +97,9 @@ class DefaultController extends Controller
 
     public function detailsAction($id)
     {
+      if (!is_numeric($id)) {
+        return $this->redirectToRoute('front_office_homepage');
+      }
       // On récupère le manager
       $em = $this->getDoctrine()->getManager();
 
