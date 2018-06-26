@@ -9,3 +9,11 @@ web_service_search_homepage:
 web_service_details_homepage:
     path:     /details/{id}
     defaults: { _controller: WebServiceBundle:Default:details }
+
+search_depart_homepage:
+    path:     /depart/{search}
+    defaults: { _controller: WebServiceBundle:Default:searchDepart }
+
+search_arrivee_homepage:
+    path:     /arrivee/{search}
+    defaults: { _controller: WebServiceBundle:Default:searchArrivee }
