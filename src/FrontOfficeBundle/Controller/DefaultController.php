@@ -17,7 +17,6 @@ class DefaultController extends Controller
 
         $form = $this->createFormBuilder()
           ->add('search', TextType::class)
-          ->add('Rechercher', SubmitType::class)
           ->getForm();
 
         $form->handleRequest($request);
