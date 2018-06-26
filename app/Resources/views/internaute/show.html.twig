@@ -8,12 +8,6 @@
       Internaute
     </h1>
 
-    <div class="ui message">
-      {{ dump(internaute) }}
-      {{ dump(voiture) }}
-      {{ dump(ville) }}
-    </div>
-
     <table class="ui selectable celled table">
       <tbody>
           <tr>
@@ -35,6 +29,14 @@
           <tr>
               <th>Mail</th>
               <td>{{ internaute.mail }}</td>
+          </tr>
+          <tr>
+              <th>Voiture</th>
+              <td>{{ voiture.voiture }}</td>
+          </tr>
+          <tr>
+              <th>Ville</th>
+              <td>{{ ville.ville }} - {{ ville.cp }}</td>
           </tr>
       </tbody>
     </table>

@@ -74,8 +74,8 @@ class internauteController extends Controller
         return $this->render('internaute/show.html.twig', array(
             'internaute' => $internaute,
             'delete_form' => $deleteForm->createView(),
-            'voiture' => $voiture,
-            'ville' => $ville
+            'voiture' => $voiture[0],
+            'ville' => $ville[0]
         ));
     }
 
