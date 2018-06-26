@@ -27,6 +27,7 @@ class DefaultController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
           $search = $form["search"]->getData();
           $text = 'Résultats de la recherche : '.$search;
+          $query = $em->createQuery();
 
           if ($form->get('searchall')->isClicked()) {
             $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId) as internaute, vd.ville as depart, va.ville as arrivee
