@@ -10,11 +10,14 @@
         {{ form_start(form) }}
           {{ form_widget(form.search, { 'attr': {'class': 'ui input'} }) }}
           <div class="ui hidden divider"></div>
-          {{ form_widget(form.searchall, { 'attr': {'class': 'ui primary button'} }) }}
-          {{ form_widget(form.searchd, { 'attr': {'class': 'ui primary button'} }) }}
-          {{ form_widget(form.searcha, { 'attr': {'class': 'ui primary button'} }) }}
+          <input class="ui primary button" name="action" type="submit" value="Recherche" />
+          <input class="ui primary button" name="action" type="submit" value="Recherche sur la ville de départ" />
+          <input class="ui primary button" name="action" type="submit" value="Recherche sur la ville d'arrivée" />
         {{ form_end(form) }}
       </div>
+    </div>
+    <div class="ui message">
+      {{ dump(submit) }}
     </div>
     {% if text|length > 0 %}
     <div class="ui message">

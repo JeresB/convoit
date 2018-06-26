@@ -17,9 +17,6 @@ class DefaultController extends Controller
 
         $form = $this->createFormBuilder()
           ->add('search', TextType::class)
-          ->add('searchall', SubmitType::class)
-          ->add('searchd', SubmitType::class)
-          ->add('searcha', SubmitType::class)
           ->getForm();
 
         $form->handleRequest($request);
@@ -27,10 +24,10 @@ class DefaultController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
           $search = $form["search"]->getData();
           $text = 'Résultats de la recherche : '.$search;
-          $query = $em->createQuery();
 
-          if ($form->get('searchall')->isClicked()) {
-            $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId) as internaute, vd.ville as depart, va.ville as arrivee
+          $submit = $request->request->get('action');
+
+          $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId) as internaute, vd.ville as depart, va.ville as arrivee
             FROM BackOfficeBundle:Trajet t,
             BackOfficeBundle:Ville v,
             BackOfficeBundle:Ville vd,
@@ -39,25 +36,6 @@ class DefaultController extends Controller
             OR (v.ville LIKE :search AND t.villeId1 = v.id))
             AND vd.id = t.villeId AND va.id = t.villeId1")
             ->setParameter('search', '%'.$search.'%');
-          } else if ($form->get('searchd')->isClicked()) {
-            $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId) as internaute, vd.ville as depart, va.ville as arrivee
-            FROM BackOfficeBundle:Trajet t,
-            BackOfficeBundle:Ville v,
-            BackOfficeBundle:Ville vd,
-            BackOfficeBundle:Ville va
-            WHERE (v.ville LIKE :search AND t.villeId = v.id)
-            AND vd.id = t.villeId AND va.id = t.villeId1")
-            ->setParameter('search', '%'.$search.'%');
-          } else if ($form->get('searcha')->isClicked()) {
-            $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId) as internaute, vd.ville as depart, va.ville as arrivee
-            FROM BackOfficeBundle:Trajet t,
-            BackOfficeBundle:Ville v,
-            BackOfficeBundle:Ville vd,
-            BackOfficeBundle:Ville va
-            WHERE (v.ville LIKE :search AND t.villeId1 = v.id)
-            AND vd.id = t.villeId AND va.id = t.villeId1")
-            ->setParameter('search', '%'.$search.'%');
-          }
 
           $trajets = array();
           $trajets_result = $query->getResult();
@@ -90,7 +68,8 @@ class DefaultController extends Controller
         return $this->render('FrontOfficeBundle:Default:index.html.twig',
           array("trajets" => $trajets,
                 "form" => $form->createView(),
-                "text" => $text
+                "text" => $text,
+                "submit" => $submit
           ));
     }
 
