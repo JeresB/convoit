@@ -18,7 +18,7 @@ class StatsController extends Controller
         $query = $em->createQuery("SELECT count(t.internauteId) total FROM BackOfficeBundle:Trajet t group by t.internauteId having count(t.internauteId) > 2");
 
         $resultat = $query->getResult();
-        $nb_internaute_trajet_2 = $resultat;
+        $nb_internaute_trajet_2 = count($resultat);
 
         $query = $em->createQuery("SELECT IDENTITY(t.villeId) as ville_id, count(t) total FROM BackOfficeBundle:Trajet t group by t.villeId order by total desc")->setMaxResults(5);
 
