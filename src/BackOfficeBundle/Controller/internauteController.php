@@ -65,6 +65,7 @@ class internauteController extends Controller
      */
     public function showAction(internaute $internaute)
     {
+        $em = $this->getDoctrine()->getManager();
         $voiture = $em->getRepository('BackOfficeBundle:Voiture')->findById($internaute['internauteId']);
 
         $deleteForm = $this->createDeleteForm($internaute);
