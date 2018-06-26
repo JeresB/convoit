@@ -20,6 +20,7 @@ class DefaultController extends Controller
           ->getForm();
 
         $form->handleRequest($request);
+        $submit = '';
 
         if ($form->isSubmitted() && $form->isValid()) {
           $search = $form["search"]->getData();
