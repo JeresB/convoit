@@ -65,11 +65,14 @@ class internauteController extends Controller
      */
     public function showAction(internaute $internaute)
     {
+        $voiture = $em->getRepository('BackOfficeBundle:Voiture')->findById($internaute['internauteId']);
+
         $deleteForm = $this->createDeleteForm($internaute);
 
         return $this->render('internaute/show.html.twig', array(
             'internaute' => $internaute,
             'delete_form' => $deleteForm->createView(),
+            'voiture' => $voiture
         ));
     }
 
