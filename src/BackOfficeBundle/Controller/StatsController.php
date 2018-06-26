@@ -33,7 +33,12 @@ class StatsController extends Controller
         $query = $em->createQuery("SELECT IDENTITY(t.villeId1) as ville_id, count(t) total FROM BackOfficeBundle:Trajet t group by t.villeId1 order by total desc")->setMaxResults(5);
 
         $resultat = $query->getResult();
-        $top_arrivee = $resultat;
+        $top_arrivee = array();
+
+        foreach ($resultat as $data) {
+          $ville = $em->getRepository('BackOfficeBundle:Ville')->findById($data['ville_id']);
+          $top_arrivee[] = $ville[0];
+        }
 
         return $this->render('BackOfficeBundle:Default:stats.html.twig',
           array("nb_internaute" => $nb_internaute,
