@@ -28,7 +28,26 @@ class DefaultController extends Controller
 
           $submit = $request->request->get('action');
 
-          $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId) as internaute, vd.ville as depart, va.ville as arrivee
+          if ($submit == 'Recherche sur la ville d\'arrivée') {
+            $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId) as internaute, vd.ville as depart, va.ville as arrivee
+              FROM BackOfficeBundle:Trajet t,
+              BackOfficeBundle:Ville v,
+              BackOfficeBundle:Ville vd,
+              BackOfficeBundle:Ville va
+              WHERE (v.ville LIKE :search AND t.villeId = v.id)
+              AND vd.id = t.villeId AND va.id = t.villeId1")
+              ->setParameter('search', '%'.$search.'%');
+          } else if ($submit == 'Recherche sur la ville de départ') {
+            $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId) as internaute, vd.ville as depart, va.ville as arrivee
+              FROM BackOfficeBundle:Trajet t,
+              BackOfficeBundle:Ville v,
+              BackOfficeBundle:Ville vd,
+              BackOfficeBundle:Ville va
+              WHERE (v.ville LIKE :search AND t.villeId1 = v.id)
+              AND vd.id = t.villeId AND va.id = t.villeId1")
+              ->setParameter('search', '%'.$search.'%');
+          } else {
+            $query = $em->createQuery("SELECT t.id, t.nbKm, t.date, IDENTITY(t.internauteId) as internaute, vd.ville as depart, va.ville as arrivee
             FROM BackOfficeBundle:Trajet t,
             BackOfficeBundle:Ville v,
             BackOfficeBundle:Ville vd,
@@ -37,6 +56,8 @@ class DefaultController extends Controller
             OR (v.ville LIKE :search AND t.villeId1 = v.id))
             AND vd.id = t.villeId AND va.id = t.villeId1")
             ->setParameter('search', '%'.$search.'%');
+          }
+
 
           $trajets = array();
           $trajets_result = $query->getResult();
