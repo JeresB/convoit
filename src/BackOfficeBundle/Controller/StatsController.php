@@ -26,7 +26,7 @@ class StatsController extends Controller
         $top_depart = array();
         foreach ($resultat as $data) {
           $ville = $em->getRepository('BackOfficeBundle:Ville')->findById($data['ville_id']);
-          $top_depart[] = $ville;
+          $top_depart[] = $ville[0];
         }
       //  $top_depart = $resultat;
 
