@@ -15,8 +15,8 @@ class __TwigTemplate_49aed911b59f5bdc360814cdea941d977abadc088ec31acbc6ac61e7d6d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_863a87c8b4dd2cbfac4e082c24cfca4cb45d7447f92bde40353d07c5b39d2749 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_863a87c8b4dd2cbfac4e082c24cfca4cb45d7447f92bde40353d07c5b39d2749->enter($__internal_863a87c8b4dd2cbfac4e082c24cfca4cb45d7447f92bde40353d07c5b39d2749_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:exception.xml.twig"));
+        $__internal_b46d0a31f219841bf2b99863dc5d3c9e858dd9e76f57d3fc11f4d9c9d0dc18a0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b46d0a31f219841bf2b99863dc5d3c9e858dd9e76f57d3fc11f4d9c9d0dc18a0->enter($__internal_b46d0a31f219841bf2b99863dc5d3c9e858dd9e76f57d3fc11f4d9c9d0dc18a0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:exception.xml.twig"));
 
         // line 1
         echo "<?xml version=\"1.0\" encoding=\"";
@@ -54,7 +54,7 @@ class __TwigTemplate_49aed911b59f5bdc360814cdea941d977abadc088ec31acbc6ac61e7d6d
         echo "</error>
 ";
         
-        $__internal_863a87c8b4dd2cbfac4e082c24cfca4cb45d7447f92bde40353d07c5b39d2749->leave($__internal_863a87c8b4dd2cbfac4e082c24cfca4cb45d7447f92bde40353d07c5b39d2749_prof);
+        $__internal_b46d0a31f219841bf2b99863dc5d3c9e858dd9e76f57d3fc11f4d9c9d0dc18a0->leave($__internal_b46d0a31f219841bf2b99863dc5d3c9e858dd9e76f57d3fc11f4d9c9d0dc18a0_prof);
 
     }
 
@@ -92,6 +92,6 @@ class __TwigTemplate_49aed911b59f5bdc360814cdea941d977abadc088ec31acbc6ac61e7d6d
     </exception>
 {% endfor %}
 </error>
-", "TwigBundle:Exception:exception.xml.twig", "/home/ubuntu/convoit/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.xml.twig");
+", "TwigBundle:Exception:exception.xml.twig", "/home/etdfrm1/www/prjsymf.cir3-frm-smf-ang-38/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.xml.twig");
     }
 }

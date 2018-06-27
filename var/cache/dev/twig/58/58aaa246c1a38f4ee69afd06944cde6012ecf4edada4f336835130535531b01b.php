@@ -15,8 +15,8 @@ class __TwigTemplate_df2b28b992fae3980366d753bdf6b872da9a7d06fe212cd23e686368cac
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2c41874687284160a1a863649feb6fec1cd76666186f2cc8fcd535c582b48cfe = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2c41874687284160a1a863649feb6fec1cd76666186f2cc8fcd535c582b48cfe->enter($__internal_2c41874687284160a1a863649feb6fec1cd76666186f2cc8fcd535c582b48cfe_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:exception.html.twig"));
+        $__internal_221aa0e793bbb3e7efad2d25f5c0058fc1942da297b7daea36483692ad947c34 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_221aa0e793bbb3e7efad2d25f5c0058fc1942da297b7daea36483692ad947c34->enter($__internal_221aa0e793bbb3e7efad2d25f5c0058fc1942da297b7daea36483692ad947c34_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:exception.html.twig"));
 
         // line 1
         echo "<div class=\"block-exception\">
@@ -236,7 +236,7 @@ class __TwigTemplate_df2b28b992fae3980366d753bdf6b872da9a7d06fe212cd23e686368cac
 //]]></script>
 ";
         
-        $__internal_2c41874687284160a1a863649feb6fec1cd76666186f2cc8fcd535c582b48cfe->leave($__internal_2c41874687284160a1a863649feb6fec1cd76666186f2cc8fcd535c582b48cfe_prof);
+        $__internal_221aa0e793bbb3e7efad2d25f5c0058fc1942da297b7daea36483692ad947c34->leave($__internal_221aa0e793bbb3e7efad2d25f5c0058fc1942da297b7daea36483692ad947c34_prof);
 
     }
 
@@ -389,6 +389,6 @@ class __TwigTemplate_df2b28b992fae3980366d753bdf6b872da9a7d06fe212cd23e686368cac
         icon2.style.display = display1;
     }
 //]]></script>
-", "TwigBundle:Exception:exception.html.twig", "/home/ubuntu/convoit/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.html.twig");
+", "TwigBundle:Exception:exception.html.twig", "/home/etdfrm1/www/prjsymf.cir3-frm-smf-ang-38/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception.html.twig");
     }
 }

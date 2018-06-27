@@ -2,9 +2,9 @@
 parameters:
     database_host: 127.0.0.1
     database_port: null
-    database_name: covoit
-    database_user: covoit
-    database_password: covoit
+    database_name: frm1
+    database_user: etdfrm1
+    database_password: 5m4Fjz5Y
     mailer_transport: smtp
     mailer_host: 127.0.0.1
     mailer_user: null

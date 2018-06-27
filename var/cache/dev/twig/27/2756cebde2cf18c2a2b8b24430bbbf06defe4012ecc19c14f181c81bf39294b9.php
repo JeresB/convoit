@@ -15,13 +15,13 @@ class __TwigTemplate_1a4e254d99350e31e2f1320a6b3258f61bc6876a0452cf5602c2a2eef09
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_274949429776b72fbdee7769cf8fcab52c39b63aaeaf61c7e2e072a132dbb4e6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_274949429776b72fbdee7769cf8fcab52c39b63aaeaf61c7e2e072a132dbb4e6->enter($__internal_274949429776b72fbdee7769cf8fcab52c39b63aaeaf61c7e2e072a132dbb4e6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.atom.twig"));
+        $__internal_ead0fdb0c5e59e5a12d73efd60d6ca45943cd4eb8b747a35f1ef8dcf2bfccd74 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ead0fdb0c5e59e5a12d73efd60d6ca45943cd4eb8b747a35f1ef8dcf2bfccd74->enter($__internal_ead0fdb0c5e59e5a12d73efd60d6ca45943cd4eb8b747a35f1ef8dcf2bfccd74_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.atom.twig"));
 
         // line 1
         $this->loadTemplate("@Twig/Exception/error.xml.twig", "TwigBundle:Exception:error.atom.twig", 1)->display($context);
         
-        $__internal_274949429776b72fbdee7769cf8fcab52c39b63aaeaf61c7e2e072a132dbb4e6->leave($__internal_274949429776b72fbdee7769cf8fcab52c39b63aaeaf61c7e2e072a132dbb4e6_prof);
+        $__internal_ead0fdb0c5e59e5a12d73efd60d6ca45943cd4eb8b747a35f1ef8dcf2bfccd74->leave($__internal_ead0fdb0c5e59e5a12d73efd60d6ca45943cd4eb8b747a35f1ef8dcf2bfccd74_prof);
 
     }
 
@@ -46,6 +46,6 @@ class __TwigTemplate_1a4e254d99350e31e2f1320a6b3258f61bc6876a0452cf5602c2a2eef09
     public function getSourceContext()
     {
         return new Twig_Source("{% include '@Twig/Exception/error.xml.twig' %}
-", "TwigBundle:Exception:error.atom.twig", "/home/ubuntu/convoit/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.atom.twig");
+", "TwigBundle:Exception:error.atom.twig", "/home/etdfrm1/www/prjsymf.cir3-frm-smf-ang-38/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.atom.twig");
     }
 }

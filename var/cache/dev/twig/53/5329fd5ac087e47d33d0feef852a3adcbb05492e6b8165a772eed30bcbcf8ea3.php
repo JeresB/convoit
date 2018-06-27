@@ -21,78 +21,77 @@ class __TwigTemplate_dd8c9716e56d7b254c2ea9422d969e5d6ca728c72ef79defd263bd9d91a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9788fd238cc4a905ccf932c91481caa2abd104746e7b9f818dc27137d13d047b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9788fd238cc4a905ccf932c91481caa2abd104746e7b9f818dc27137d13d047b->enter($__internal_9788fd238cc4a905ccf932c91481caa2abd104746e7b9f818dc27137d13d047b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":ville:show.html.twig"));
+        $__internal_debe90122993ff28d9f57b00fd471f9c0f6cc1560a304df7a288e8d295168d3c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_debe90122993ff28d9f57b00fd471f9c0f6cc1560a304df7a288e8d295168d3c->enter($__internal_debe90122993ff28d9f57b00fd471f9c0f6cc1560a304df7a288e8d295168d3c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":ville:show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_9788fd238cc4a905ccf932c91481caa2abd104746e7b9f818dc27137d13d047b->leave($__internal_9788fd238cc4a905ccf932c91481caa2abd104746e7b9f818dc27137d13d047b_prof);
+        $__internal_debe90122993ff28d9f57b00fd471f9c0f6cc1560a304df7a288e8d295168d3c->leave($__internal_debe90122993ff28d9f57b00fd471f9c0f6cc1560a304df7a288e8d295168d3c_prof);
 
     }
 
     // line 3
     public function block_content($context, array $blocks = array())
     {
-        $__internal_f354bfefdf70f6fc2961c4854506f172365acc05ea532527c622f18aff699601 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f354bfefdf70f6fc2961c4854506f172365acc05ea532527c622f18aff699601->enter($__internal_f354bfefdf70f6fc2961c4854506f172365acc05ea532527c622f18aff699601_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_738af99b2d354bedb9f44a3c53323b5f42f237fb12e40317f21ea0817f1f02a5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_738af99b2d354bedb9f44a3c53323b5f42f237fb12e40317f21ea0817f1f02a5->enter($__internal_738af99b2d354bedb9f44a3c53323b5f42f237fb12e40317f21ea0817f1f02a5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
-        echo "    <h1>Ville</h1>
+        echo "<main class=\"ui container\">
+  <section class=\"ui raised segment\">
+    <h1 class=\"ui horizontal divider header\">
+      <i class=\"home icon\"></i>
+      Ville
+    </h1>
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>";
-        // line 10
+    <table class=\"ui selectable celled table\">
+      <tbody>
+          <tr>
+              <th>Id</th>
+              <td>";
+        // line 15
         echo twig_escape_filter($this->env, $this->getAttribute(($context["ville"] ?? $this->getContext($context, "ville")), "id", array()), "html", null, true);
         echo "</td>
-            </tr>
-            <tr>
-                <th>Ville</th>
-                <td>";
-        // line 14
+          </tr>
+          <tr>
+              <th>Ville</th>
+              <td>";
+        // line 19
         echo twig_escape_filter($this->env, $this->getAttribute(($context["ville"] ?? $this->getContext($context, "ville")), "ville", array()), "html", null, true);
         echo "</td>
-            </tr>
-            <tr>
-                <th>Cp</th>
-                <td>";
-        // line 18
+          </tr>
+          <tr>
+              <th>Cp</th>
+              <td>";
+        // line 23
         echo twig_escape_filter($this->env, $this->getAttribute(($context["ville"] ?? $this->getContext($context, "ville")), "cp", array()), "html", null, true);
         echo "</td>
-            </tr>
-        </tbody>
+          </tr>
+      </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href=\"";
-        // line 25
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ville_index");
-        echo "\">Back to the list</a>
-        </li>
-        <li>
-            <a href=\"";
+    ";
         // line 28
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ville_edit", array("id" => $this->getAttribute(($context["ville"] ?? $this->getContext($context, "ville")), "id", array()))), "html", null, true);
-        echo "\">Edit</a>
-        </li>
-        <li>
-            ";
-        // line 31
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock(($context["delete_form"] ?? $this->getContext($context, "delete_form")), 'form_start');
         echo "
-                <input type=\"submit\" value=\"Delete\">
-            ";
-        // line 33
+    <input class=\"ui red right floated button\" type=\"submit\" value=\"Supprimer\">
+    ";
+        // line 30
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock(($context["delete_form"] ?? $this->getContext($context, "delete_form")), 'form_end');
         echo "
-        </li>
-    </ul>
+    <a class=\"ui primary button\" href=\"";
+        // line 31
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ville_index");
+        echo "\">Retourner à la liste</a>
+    <a class=\"ui primary button\" href=\"";
+        // line 32
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ville_edit", array("id" => $this->getAttribute(($context["ville"] ?? $this->getContext($context, "ville")), "id", array()))), "html", null, true);
+        echo "\">Edition</a>
+  </section>
+</main>
 ";
         
-        $__internal_f354bfefdf70f6fc2961c4854506f172365acc05ea532527c622f18aff699601->leave($__internal_f354bfefdf70f6fc2961c4854506f172365acc05ea532527c622f18aff699601_prof);
+        $__internal_738af99b2d354bedb9f44a3c53323b5f42f237fb12e40317f21ea0817f1f02a5->leave($__internal_738af99b2d354bedb9f44a3c53323b5f42f237fb12e40317f21ea0817f1f02a5_prof);
 
     }
 
@@ -108,7 +107,7 @@ class __TwigTemplate_dd8c9716e56d7b254c2ea9422d969e5d6ca728c72ef79defd263bd9d91a
 
     public function getDebugInfo()
     {
-        return array (  89 => 33,  84 => 31,  78 => 28,  72 => 25,  62 => 18,  55 => 14,  48 => 10,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  88 => 32,  84 => 31,  80 => 30,  75 => 28,  67 => 23,  60 => 19,  53 => 15,  40 => 4,  34 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -124,39 +123,38 @@ class __TwigTemplate_dd8c9716e56d7b254c2ea9422d969e5d6ca728c72ef79defd263bd9d91a
         return new Twig_Source("{% extends 'BackOfficeBundle:Default:layout.html.twig' %}
 
 {% block content %}
-    <h1>Ville</h1>
+<main class=\"ui container\">
+  <section class=\"ui raised segment\">
+    <h1 class=\"ui horizontal divider header\">
+      <i class=\"home icon\"></i>
+      Ville
+    </h1>
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ ville.id }}</td>
-            </tr>
-            <tr>
-                <th>Ville</th>
-                <td>{{ ville.ville }}</td>
-            </tr>
-            <tr>
-                <th>Cp</th>
-                <td>{{ ville.cp }}</td>
-            </tr>
-        </tbody>
+    <table class=\"ui selectable celled table\">
+      <tbody>
+          <tr>
+              <th>Id</th>
+              <td>{{ ville.id }}</td>
+          </tr>
+          <tr>
+              <th>Ville</th>
+              <td>{{ ville.ville }}</td>
+          </tr>
+          <tr>
+              <th>Cp</th>
+              <td>{{ ville.cp }}</td>
+          </tr>
+      </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href=\"{{ path('ville_index') }}\">Back to the list</a>
-        </li>
-        <li>
-            <a href=\"{{ path('ville_edit', { 'id': ville.id }) }}\">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type=\"submit\" value=\"Delete\">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    {{ form_start(delete_form) }}
+    <input class=\"ui red right floated button\" type=\"submit\" value=\"Supprimer\">
+    {{ form_end(delete_form) }}
+    <a class=\"ui primary button\" href=\"{{ path('ville_index') }}\">Retourner à la liste</a>
+    <a class=\"ui primary button\" href=\"{{ path('ville_edit', { 'id': ville.id }) }}\">Edition</a>
+  </section>
+</main>
 {% endblock %}
-", ":ville:show.html.twig", "/home/ubuntu/convoit/app/Resources/views/ville/show.html.twig");
+", ":ville:show.html.twig", "/home/etdfrm1/www/prjsymf.cir3-frm-smf-ang-38/app/Resources/views/ville/show.html.twig");
     }
 }

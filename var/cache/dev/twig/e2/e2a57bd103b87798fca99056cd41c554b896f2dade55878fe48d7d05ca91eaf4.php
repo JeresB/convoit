@@ -15,8 +15,8 @@ class __TwigTemplate_b5199c97b17958c87e5849af707219510a9234343a67724600fd2b1a411
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0c58f4ce486333aeb45d53f8d4f149941b55f1c3e7a4d5036baeb98c9baa85d7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0c58f4ce486333aeb45d53f8d4f149941b55f1c3e7a4d5036baeb98c9baa85d7->enter($__internal_0c58f4ce486333aeb45d53f8d4f149941b55f1c3e7a4d5036baeb98c9baa85d7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.xml.twig"));
+        $__internal_f02e08268c1f13567c1751fd749adfd98d5df6ca52d97c058a101a33a92d3edb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f02e08268c1f13567c1751fd749adfd98d5df6ca52d97c058a101a33a92d3edb->enter($__internal_f02e08268c1f13567c1751fd749adfd98d5df6ca52d97c058a101a33a92d3edb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.xml.twig"));
 
         // line 1
         echo "<?xml version=\"1.0\" encoding=\"";
@@ -31,7 +31,7 @@ class __TwigTemplate_b5199c97b17958c87e5849af707219510a9234343a67724600fd2b1a411
         echo "\" />
 ";
         
-        $__internal_0c58f4ce486333aeb45d53f8d4f149941b55f1c3e7a4d5036baeb98c9baa85d7->leave($__internal_0c58f4ce486333aeb45d53f8d4f149941b55f1c3e7a4d5036baeb98c9baa85d7_prof);
+        $__internal_f02e08268c1f13567c1751fd749adfd98d5df6ca52d97c058a101a33a92d3edb->leave($__internal_f02e08268c1f13567c1751fd749adfd98d5df6ca52d97c058a101a33a92d3edb_prof);
 
     }
 
@@ -63,6 +63,6 @@ class __TwigTemplate_b5199c97b17958c87e5849af707219510a9234343a67724600fd2b1a411
         return new Twig_Source("<?xml version=\"1.0\" encoding=\"{{ _charset }}\" ?>
 
 <error code=\"{{ status_code }}\" message=\"{{ status_text }}\" />
-", "TwigBundle:Exception:error.xml.twig", "/home/ubuntu/convoit/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.xml.twig");
+", "TwigBundle:Exception:error.xml.twig", "/home/etdfrm1/www/prjsymf.cir3-frm-smf-ang-38/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.xml.twig");
     }
 }

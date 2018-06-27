@@ -21,20 +21,20 @@ class __TwigTemplate_49a4ea83cd9929f096bd921d0dd89c07a2dbacd5e100f04cceaf96110ac
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8fd5bda93072b46a5cbbc74c3097952bf9a1cb870850b0b0828387585e538232 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8fd5bda93072b46a5cbbc74c3097952bf9a1cb870850b0b0828387585e538232->enter($__internal_8fd5bda93072b46a5cbbc74c3097952bf9a1cb870850b0b0828387585e538232_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontOfficeBundle:Default:index.html.twig"));
+        $__internal_1bbf9357b7a57442a33a780aa300fcac9b2b6b4f32b6816a4e1d82f64c640759 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1bbf9357b7a57442a33a780aa300fcac9b2b6b4f32b6816a4e1d82f64c640759->enter($__internal_1bbf9357b7a57442a33a780aa300fcac9b2b6b4f32b6816a4e1d82f64c640759_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FrontOfficeBundle:Default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_8fd5bda93072b46a5cbbc74c3097952bf9a1cb870850b0b0828387585e538232->leave($__internal_8fd5bda93072b46a5cbbc74c3097952bf9a1cb870850b0b0828387585e538232_prof);
+        $__internal_1bbf9357b7a57442a33a780aa300fcac9b2b6b4f32b6816a4e1d82f64c640759->leave($__internal_1bbf9357b7a57442a33a780aa300fcac9b2b6b4f32b6816a4e1d82f64c640759_prof);
 
     }
 
     // line 2
     public function block_content($context, array $blocks = array())
     {
-        $__internal_d817167c9ab247862abafe4b9946a403f95184c27dfa14322f6075fc8e5ace33 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d817167c9ab247862abafe4b9946a403f95184c27dfa14322f6075fc8e5ace33->enter($__internal_d817167c9ab247862abafe4b9946a403f95184c27dfa14322f6075fc8e5ace33_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_84f1287f7f65364a6108a4960ef557bb08868e62a171206edbd4c1ca45ce999b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_84f1287f7f65364a6108a4960ef557bb08868e62a171206edbd4c1ca45ce999b->enter($__internal_84f1287f7f65364a6108a4960ef557bb08868e62a171206edbd4c1ca45ce999b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 3
         echo "<main class=\"ui container\">
@@ -50,33 +50,33 @@ class __TwigTemplate_49a4ea83cd9929f096bd921d0dd89c07a2dbacd5e100f04cceaf96110ac
         echo "
           ";
         // line 11
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "search", array()), 'widget', array("attr" => array("class" => "prompt")));
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "search", array()), 'widget', array("attr" => array("class" => "ui input")));
         echo "
-          ";
-        // line 12
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "Rechercher", array()), 'widget', array("attr" => array("class" => "prompt")));
-        echo "
+          <div class=\"ui hidden divider\"></div>
+          <input class=\"ui primary button\" name=\"action\" type=\"submit\" value=\"Recherche\" />
+          <input class=\"ui primary button\" name=\"action\" type=\"submit\" value=\"Recherche sur la ville de départ\" />
+          <input class=\"ui primary button\" name=\"action\" type=\"submit\" value=\"Recherche sur la ville d'arrivée\" />
         ";
-        // line 13
+        // line 16
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
         echo "
       </div>
     </div>
     ";
-        // line 16
+        // line 19
         if ((twig_length_filter($this->env, ($context["text"] ?? $this->getContext($context, "text"))) > 0)) {
-            // line 17
+            // line 20
             echo "    <div class=\"ui message\">
       <div class=\"header\">
         ";
-            // line 19
+            // line 22
             echo twig_escape_filter($this->env, ($context["text"] ?? $this->getContext($context, "text")), "html", null, true);
             echo "
       </div>
     </div>
     ";
         }
-        // line 23
+        // line 26
         echo "    <table class=\"ui selectable celled table\">
       <thead>
         <tr>
@@ -90,38 +90,38 @@ class __TwigTemplate_49a4ea83cd9929f096bd921d0dd89c07a2dbacd5e100f04cceaf96110ac
       </thead>
       <tbody>
         ";
-        // line 35
+        // line 38
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["trajets"] ?? $this->getContext($context, "trajets")));
         foreach ($context['_seq'] as $context["_key"] => $context["trajet"]) {
-            // line 36
+            // line 39
             echo "            <tr>
               <td><a href=\"/";
-            // line 37
+            // line 40
             echo twig_escape_filter($this->env, $this->getAttribute($context["trajet"], "id", array()), "html", null, true);
             echo "\">Trajet ";
             echo twig_escape_filter($this->env, $this->getAttribute($context["trajet"], "id", array()), "html", null, true);
             echo "</a></td>
               <td>";
-            // line 38
+            // line 41
             echo twig_escape_filter($this->env, $this->getAttribute($context["trajet"], "nbKm", array()), "html", null, true);
             echo "</td>
               <td>";
-            // line 39
+            // line 42
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["trajet"], "date", array()), "m/d/Y H:i:s"), "html", null, true);
             echo "</td>
               <td>";
-            // line 40
+            // line 43
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["trajet"], "internaute", array()), "prenom", array()), "html", null, true);
             echo " ";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["trajet"], "internaute", array()), "nom", array()), "html", null, true);
             echo "</td>
               <td>";
-            // line 41
+            // line 44
             echo twig_escape_filter($this->env, $this->getAttribute($context["trajet"], "depart", array()), "html", null, true);
             echo "</td>
               <td>";
-            // line 42
+            // line 45
             echo twig_escape_filter($this->env, $this->getAttribute($context["trajet"], "arrivee", array()), "html", null, true);
             echo "</td>
             </tr>
@@ -130,23 +130,23 @@ class __TwigTemplate_49a4ea83cd9929f096bd921d0dd89c07a2dbacd5e100f04cceaf96110ac
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['trajet'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 45
+        // line 48
         echo "        ";
         if (twig_test_empty(($context["trajets"] ?? $this->getContext($context, "trajets")))) {
-            // line 46
+            // line 49
             echo "            <tr>
               <td>Pas de résultat</td>
             </tr>
         ";
         }
-        // line 50
+        // line 53
         echo "      </tbody>
     </table>
   </section>
 </main>
 ";
         
-        $__internal_d817167c9ab247862abafe4b9946a403f95184c27dfa14322f6075fc8e5ace33->leave($__internal_d817167c9ab247862abafe4b9946a403f95184c27dfa14322f6075fc8e5ace33_prof);
+        $__internal_84f1287f7f65364a6108a4960ef557bb08868e62a171206edbd4c1ca45ce999b->leave($__internal_84f1287f7f65364a6108a4960ef557bb08868e62a171206edbd4c1ca45ce999b_prof);
 
     }
 
@@ -162,7 +162,7 @@ class __TwigTemplate_49a4ea83cd9929f096bd921d0dd89c07a2dbacd5e100f04cceaf96110ac
 
     public function getDebugInfo()
     {
-        return array (  143 => 50,  137 => 46,  134 => 45,  125 => 42,  121 => 41,  115 => 40,  111 => 39,  107 => 38,  101 => 37,  98 => 36,  94 => 35,  80 => 23,  73 => 19,  69 => 17,  67 => 16,  61 => 13,  57 => 12,  53 => 11,  49 => 10,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  143 => 53,  137 => 49,  134 => 48,  125 => 45,  121 => 44,  115 => 43,  111 => 42,  107 => 41,  101 => 40,  98 => 39,  94 => 38,  80 => 26,  73 => 22,  69 => 20,  67 => 19,  61 => 16,  53 => 11,  49 => 10,  40 => 3,  34 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -185,8 +185,11 @@ class __TwigTemplate_49a4ea83cd9929f096bd921d0dd89c07a2dbacd5e100f04cceaf96110ac
         <!-- <input class=\"prompt\" type=\"text\" placeholder=\"Common passwords...\">
         <i class=\"search icon\"></i> -->
         {{ form_start(form) }}
-          {{ form_widget(form.search, { 'attr': {'class': 'prompt'} }) }}
-          {{ form_widget(form.Rechercher, { 'attr': {'class': 'prompt'} }) }}
+          {{ form_widget(form.search, { 'attr': {'class': 'ui input'} }) }}
+          <div class=\"ui hidden divider\"></div>
+          <input class=\"ui primary button\" name=\"action\" type=\"submit\" value=\"Recherche\" />
+          <input class=\"ui primary button\" name=\"action\" type=\"submit\" value=\"Recherche sur la ville de départ\" />
+          <input class=\"ui primary button\" name=\"action\" type=\"submit\" value=\"Recherche sur la ville d'arrivée\" />
         {{ form_end(form) }}
       </div>
     </div>
@@ -229,6 +232,6 @@ class __TwigTemplate_49a4ea83cd9929f096bd921d0dd89c07a2dbacd5e100f04cceaf96110ac
   </section>
 </main>
 {% endblock %}
-", "FrontOfficeBundle:Default:index.html.twig", "/home/ubuntu/convoit/src/FrontOfficeBundle/Resources/views/Default/index.html.twig");
+", "FrontOfficeBundle:Default:index.html.twig", "/home/etdfrm1/www/prjsymf.cir3-frm-smf-ang-38/src/FrontOfficeBundle/Resources/views/Default/index.html.twig");
     }
 }

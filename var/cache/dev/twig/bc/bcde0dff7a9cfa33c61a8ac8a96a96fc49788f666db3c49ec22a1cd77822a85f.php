@@ -21,60 +21,68 @@ class __TwigTemplate_e7b3b58b97916ffcebf296789edf3e8bb4931de673a363d48badbb6fd12
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c7ebe31840c10167401bc55787f0fb1baf1a7d882bc7894da561c14d1a0077f6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c7ebe31840c10167401bc55787f0fb1baf1a7d882bc7894da561c14d1a0077f6->enter($__internal_c7ebe31840c10167401bc55787f0fb1baf1a7d882bc7894da561c14d1a0077f6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":ville:edit.html.twig"));
+        $__internal_dd39c89c51e36ebbc91b9ca66999ca6271506a0962184c527be853e6ab51cb6c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_dd39c89c51e36ebbc91b9ca66999ca6271506a0962184c527be853e6ab51cb6c->enter($__internal_dd39c89c51e36ebbc91b9ca66999ca6271506a0962184c527be853e6ab51cb6c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":ville:edit.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c7ebe31840c10167401bc55787f0fb1baf1a7d882bc7894da561c14d1a0077f6->leave($__internal_c7ebe31840c10167401bc55787f0fb1baf1a7d882bc7894da561c14d1a0077f6_prof);
+        $__internal_dd39c89c51e36ebbc91b9ca66999ca6271506a0962184c527be853e6ab51cb6c->leave($__internal_dd39c89c51e36ebbc91b9ca66999ca6271506a0962184c527be853e6ab51cb6c_prof);
 
     }
 
     // line 3
     public function block_content($context, array $blocks = array())
     {
-        $__internal_772cc37360498b4bcbda0256ec99ab17caac3411327d46f6a19c35f219ebc631 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_772cc37360498b4bcbda0256ec99ab17caac3411327d46f6a19c35f219ebc631->enter($__internal_772cc37360498b4bcbda0256ec99ab17caac3411327d46f6a19c35f219ebc631_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_610b4d95dd03f4aa44014102df05919a26ab977a0d82d616a10f705260519cd4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_610b4d95dd03f4aa44014102df05919a26ab977a0d82d616a10f705260519cd4->enter($__internal_610b4d95dd03f4aa44014102df05919a26ab977a0d82d616a10f705260519cd4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
-        echo "    <h1>Ville edit</h1>
-
+        echo "<main class=\"ui container\">
+  <section class=\"ui raised segment\">
+    <h1 class=\"ui horizontal divider header\">
+      <i class=\"home icon\"></i>
+      Edition Ville
+    </h1>
     ";
-        // line 6
+        // line 10
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock(($context["edit_form"] ?? $this->getContext($context, "edit_form")), 'form_start');
         echo "
-        ";
-        // line 7
+    ";
+        // line 11
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock(($context["edit_form"] ?? $this->getContext($context, "edit_form")), 'widget');
         echo "
-        <input type=\"submit\" value=\"Edit\" />
-    ";
-        // line 9
+    <div class=\"ui hidden divider\"></div>
+    <div class=\"ui grid\">
+      <div class=\"six wide column\">
+        <input class=\"fluid ui primary button\" type=\"submit\" value=\"Editer\" />
+        ";
+        // line 16
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock(($context["edit_form"] ?? $this->getContext($context, "edit_form")), 'form_end');
         echo "
-
-    <ul>
-        <li>
-            <a href=\"";
-        // line 13
+      </div>
+      <div class=\"six wide column\">
+        <a class=\"fluid ui primary button\" href=\"";
+        // line 19
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ville_index");
-        echo "\">Back to the list</a>
-        </li>
-        <li>
-            ";
-        // line 16
+        echo "\">Retourner à la liste</a>
+      </div>
+      <div class=\"four wide column\">
+        ";
+        // line 22
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock(($context["delete_form"] ?? $this->getContext($context, "delete_form")), 'form_start');
         echo "
-                <input type=\"submit\" value=\"Delete\">
-            ";
-        // line 18
+        <input class=\"ui red button\" type=\"submit\" value=\"Supprimer\">
+        ";
+        // line 24
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock(($context["delete_form"] ?? $this->getContext($context, "delete_form")), 'form_end');
         echo "
-        </li>
-    </ul>
+      </div>
+    </div>
+  </section>
+</main>
 ";
         
-        $__internal_772cc37360498b4bcbda0256ec99ab17caac3411327d46f6a19c35f219ebc631->leave($__internal_772cc37360498b4bcbda0256ec99ab17caac3411327d46f6a19c35f219ebc631_prof);
+        $__internal_610b4d95dd03f4aa44014102df05919a26ab977a0d82d616a10f705260519cd4->leave($__internal_610b4d95dd03f4aa44014102df05919a26ab977a0d82d616a10f705260519cd4_prof);
 
     }
 
@@ -90,7 +98,7 @@ class __TwigTemplate_e7b3b58b97916ffcebf296789edf3e8bb4931de673a363d48badbb6fd12
 
     public function getDebugInfo()
     {
-        return array (  71 => 18,  66 => 16,  60 => 13,  53 => 9,  48 => 7,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  77 => 24,  72 => 22,  66 => 19,  60 => 16,  52 => 11,  48 => 10,  40 => 4,  34 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -106,24 +114,32 @@ class __TwigTemplate_e7b3b58b97916ffcebf296789edf3e8bb4931de673a363d48badbb6fd12
         return new Twig_Source("{% extends 'BackOfficeBundle:Default:layout.html.twig' %}
 
 {% block content %}
-    <h1>Ville edit</h1>
-
+<main class=\"ui container\">
+  <section class=\"ui raised segment\">
+    <h1 class=\"ui horizontal divider header\">
+      <i class=\"home icon\"></i>
+      Edition Ville
+    </h1>
     {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type=\"submit\" value=\"Edit\" />
-    {{ form_end(edit_form) }}
-
-    <ul>
-        <li>
-            <a href=\"{{ path('ville_index') }}\">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type=\"submit\" value=\"Delete\">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    {{ form_widget(edit_form) }}
+    <div class=\"ui hidden divider\"></div>
+    <div class=\"ui grid\">
+      <div class=\"six wide column\">
+        <input class=\"fluid ui primary button\" type=\"submit\" value=\"Editer\" />
+        {{ form_end(edit_form) }}
+      </div>
+      <div class=\"six wide column\">
+        <a class=\"fluid ui primary button\" href=\"{{ path('ville_index') }}\">Retourner à la liste</a>
+      </div>
+      <div class=\"four wide column\">
+        {{ form_start(delete_form) }}
+        <input class=\"ui red button\" type=\"submit\" value=\"Supprimer\">
+        {{ form_end(delete_form) }}
+      </div>
+    </div>
+  </section>
+</main>
 {% endblock %}
-", ":ville:edit.html.twig", "/home/ubuntu/convoit/app/Resources/views/ville/edit.html.twig");
+", ":ville:edit.html.twig", "/home/etdfrm1/www/prjsymf.cir3-frm-smf-ang-38/app/Resources/views/ville/edit.html.twig");
     }
 }

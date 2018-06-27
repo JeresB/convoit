@@ -15,15 +15,15 @@ class __TwigTemplate_72111f2bb34a4692c3c0a7e55cc41e467ad2b8c3530294bfd71f5611508
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0643f7c78ab703ab78341e918cf897f59e27be0c86f475a6795187593f7605b4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0643f7c78ab703ab78341e918cf897f59e27be0c86f475a6795187593f7605b4->enter($__internal_0643f7c78ab703ab78341e918cf897f59e27be0c86f475a6795187593f7605b4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.json.twig"));
+        $__internal_a60a695b68eb2caabb6328a788e334ff3d31dfbbd8c63a216074cc9a5135d143 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a60a695b68eb2caabb6328a788e334ff3d31dfbbd8c63a216074cc9a5135d143->enter($__internal_a60a695b68eb2caabb6328a788e334ff3d31dfbbd8c63a216074cc9a5135d143_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.json.twig"));
 
         // line 1
         echo twig_jsonencode_filter(array("error" => array("code" => ($context["status_code"] ?? $this->getContext($context, "status_code")), "message" => ($context["status_text"] ?? $this->getContext($context, "status_text")))));
         echo "
 ";
         
-        $__internal_0643f7c78ab703ab78341e918cf897f59e27be0c86f475a6795187593f7605b4->leave($__internal_0643f7c78ab703ab78341e918cf897f59e27be0c86f475a6795187593f7605b4_prof);
+        $__internal_a60a695b68eb2caabb6328a788e334ff3d31dfbbd8c63a216074cc9a5135d143->leave($__internal_a60a695b68eb2caabb6328a788e334ff3d31dfbbd8c63a216074cc9a5135d143_prof);
 
     }
 
@@ -53,6 +53,6 @@ class __TwigTemplate_72111f2bb34a4692c3c0a7e55cc41e467ad2b8c3530294bfd71f5611508
     public function getSourceContext()
     {
         return new Twig_Source("{{ { 'error': { 'code': status_code, 'message': status_text } }|json_encode|raw }}
-", "TwigBundle:Exception:error.json.twig", "/home/ubuntu/convoit/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.json.twig");
+", "TwigBundle:Exception:error.json.twig", "/home/etdfrm1/www/prjsymf.cir3-frm-smf-ang-38/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.json.twig");
     }
 }

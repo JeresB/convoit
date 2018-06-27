@@ -15,14 +15,14 @@ class __TwigTemplate_d7dbf3db3bb7bed2a3f4feef7501c2394c961991fa14539e0d0c8dba0b6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f5893bef551564abfb921666f9109e7caea5d8d5bea7e36bb1c1cde69c20bb48 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f5893bef551564abfb921666f9109e7caea5d8d5bea7e36bb1c1cde69c20bb48->enter($__internal_f5893bef551564abfb921666f9109e7caea5d8d5bea7e36bb1c1cde69c20bb48_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_options.html.php"));
+        $__internal_a6606a3e80c9e674afe546b73bd98e76d25b995ba44741ffae5bfdc6d0ee94b2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a6606a3e80c9e674afe546b73bd98e76d25b995ba44741ffae5bfdc6d0ee94b2->enter($__internal_a6606a3e80c9e674afe546b73bd98e76d25b995ba44741ffae5bfdc6d0ee94b2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_options.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->block(\$form, 'choice_widget_options') ?>
 ";
         
-        $__internal_f5893bef551564abfb921666f9109e7caea5d8d5bea7e36bb1c1cde69c20bb48->leave($__internal_f5893bef551564abfb921666f9109e7caea5d8d5bea7e36bb1c1cde69c20bb48_prof);
+        $__internal_a6606a3e80c9e674afe546b73bd98e76d25b995ba44741ffae5bfdc6d0ee94b2->leave($__internal_a6606a3e80c9e674afe546b73bd98e76d25b995ba44741ffae5bfdc6d0ee94b2_prof);
 
     }
 
@@ -47,6 +47,6 @@ class __TwigTemplate_d7dbf3db3bb7bed2a3f4feef7501c2394c961991fa14539e0d0c8dba0b6
     public function getSourceContext()
     {
         return new Twig_Source("<?php echo \$view['form']->block(\$form, 'choice_widget_options') ?>
-", "@Framework/Form/choice_options.html.php", "/home/ubuntu/convoit/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/choice_options.html.php");
+", "@Framework/Form/choice_options.html.php", "/home/etdfrm1/www/prjsymf.cir3-frm-smf-ang-38/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/choice_options.html.php");
     }
 }

@@ -59,7 +59,6 @@ class appDevDebugProjectContainerUrlGenerator extends Symfony\Component\Routing\
         'search_arrivee_homepage' => array (  0 =>   array (    0 => 'search',  ),  1 =>   array (    '_controller' => 'WebServiceBundle\\Controller\\DefaultController::searchArriveeAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '[^/]++',      3 => 'search',    ),    1 =>     array (      0 => 'text',      1 => '/api/arrivee',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'front_office_homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'FrontOfficeBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'trajet_homepage' => array (  0 =>   array (    0 => 'id',  ),  1 =>   array (    '_controller' => 'FrontOfficeBundle\\Controller\\DefaultController::detailsAction',  ),  2 =>   array (    'page' => '\\d+',  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '[^/]++',      3 => 'id',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
-        'homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
     );
         }
     }

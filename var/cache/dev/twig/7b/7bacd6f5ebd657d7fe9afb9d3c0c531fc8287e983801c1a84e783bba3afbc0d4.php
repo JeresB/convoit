@@ -15,8 +15,8 @@ class __TwigTemplate_f2c68e12239ae1cdbaff98c7b918d8780c5ce60a6fc76611ed2dc09c09b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e41eae16fe3b982388bc1a0839329c7d1fa4046bc112f5a96a22bebe968511e1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e41eae16fe3b982388bc1a0839329c7d1fa4046bc112f5a96a22bebe968511e1->enter($__internal_e41eae16fe3b982388bc1a0839329c7d1fa4046bc112f5a96a22bebe968511e1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.txt.twig"));
+        $__internal_f700b6adb6e78aeff284804048dc61289d23f1598568dde1af33b5388175f366 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f700b6adb6e78aeff284804048dc61289d23f1598568dde1af33b5388175f366->enter($__internal_f700b6adb6e78aeff284804048dc61289d23f1598568dde1af33b5388175f366_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.txt.twig"));
 
         // line 1
         echo "Oops! An Error Occurred
@@ -33,7 +33,7 @@ Something is broken. Please let us know what you were doing when this error occu
 We will fix it as soon as possible. Sorry for any inconvenience caused.
 ";
         
-        $__internal_e41eae16fe3b982388bc1a0839329c7d1fa4046bc112f5a96a22bebe968511e1->leave($__internal_e41eae16fe3b982388bc1a0839329c7d1fa4046bc112f5a96a22bebe968511e1_prof);
+        $__internal_f700b6adb6e78aeff284804048dc61289d23f1598568dde1af33b5388175f366->leave($__internal_f700b6adb6e78aeff284804048dc61289d23f1598568dde1af33b5388175f366_prof);
 
     }
 
@@ -69,6 +69,6 @@ The server returned a \"{{ status_code }} {{ status_text }}\".
 
 Something is broken. Please let us know what you were doing when this error occurred.
 We will fix it as soon as possible. Sorry for any inconvenience caused.
-", "TwigBundle:Exception:error.txt.twig", "/home/ubuntu/convoit/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.txt.twig");
+", "TwigBundle:Exception:error.txt.twig", "/home/etdfrm1/www/prjsymf.cir3-frm-smf-ang-38/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.txt.twig");
     }
 }

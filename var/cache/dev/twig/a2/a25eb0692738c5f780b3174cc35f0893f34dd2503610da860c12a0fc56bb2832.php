@@ -21,49 +21,58 @@ class __TwigTemplate_b688c2def2d3f0b12eef090b4aa74c023c07edaad89ed50bd865a07a9b5
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3902bb4cc014a3099a5fa14166db33e8bf7838e2c59cdf02051c07c5721f9078 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3902bb4cc014a3099a5fa14166db33e8bf7838e2c59cdf02051c07c5721f9078->enter($__internal_3902bb4cc014a3099a5fa14166db33e8bf7838e2c59cdf02051c07c5721f9078_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":ville:new.html.twig"));
+        $__internal_3255fc8e582feb345643c6a8cbd78d1faeaafa704341e5fa304ea9c98b2a1154 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3255fc8e582feb345643c6a8cbd78d1faeaafa704341e5fa304ea9c98b2a1154->enter($__internal_3255fc8e582feb345643c6a8cbd78d1faeaafa704341e5fa304ea9c98b2a1154_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":ville:new.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_3902bb4cc014a3099a5fa14166db33e8bf7838e2c59cdf02051c07c5721f9078->leave($__internal_3902bb4cc014a3099a5fa14166db33e8bf7838e2c59cdf02051c07c5721f9078_prof);
+        $__internal_3255fc8e582feb345643c6a8cbd78d1faeaafa704341e5fa304ea9c98b2a1154->leave($__internal_3255fc8e582feb345643c6a8cbd78d1faeaafa704341e5fa304ea9c98b2a1154_prof);
 
     }
 
     // line 3
     public function block_content($context, array $blocks = array())
     {
-        $__internal_7d7cef81124d5c9bf646ce8a87d3b338afbc35bf2a59acdf288e32c1312f9300 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7d7cef81124d5c9bf646ce8a87d3b338afbc35bf2a59acdf288e32c1312f9300->enter($__internal_7d7cef81124d5c9bf646ce8a87d3b338afbc35bf2a59acdf288e32c1312f9300_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_af9e4ee4fca76642cfb63e5314ee913d5994f09c3541f62ea48c2fc0a6c01d76 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_af9e4ee4fca76642cfb63e5314ee913d5994f09c3541f62ea48c2fc0a6c01d76->enter($__internal_af9e4ee4fca76642cfb63e5314ee913d5994f09c3541f62ea48c2fc0a6c01d76_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
-        echo "    <h1>Ville creation</h1>
+        echo "<main class=\"ui container\">
+  <section class=\"ui raised segment\">
+    <h1 class=\"ui horizontal divider header\">
+      <i class=\"home icon\"></i>
+      Création Ville
+    </h1>
 
     ";
-        // line 6
+        // line 11
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_start');
         echo "
-        ";
-        // line 7
+    ";
+        // line 12
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock(($context["form"] ?? $this->getContext($context, "form")), 'widget');
         echo "
-        <input type=\"submit\" value=\"Create\" />
-    ";
-        // line 9
+    <div class=\"ui hidden divider\"></div>
+    <div class=\"ui grid\">
+      <div class=\"six wide column\">
+        <input class=\"ui primary button\" type=\"submit\" value=\"Creer\" />
+        ";
+        // line 17
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
         echo "
-
-    <ul>
-        <li>
-            <a href=\"";
-        // line 13
+      </div>
+      <div class=\"six wide column\">
+        <a class=\"ui primary button\" href=\"";
+        // line 20
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("ville_index");
-        echo "\">Back to the list</a>
-        </li>
-    </ul>
+        echo "\">Retourner à la liste</a>
+      </div>
+    </div>
+  </section>
+</main>
 ";
         
-        $__internal_7d7cef81124d5c9bf646ce8a87d3b338afbc35bf2a59acdf288e32c1312f9300->leave($__internal_7d7cef81124d5c9bf646ce8a87d3b338afbc35bf2a59acdf288e32c1312f9300_prof);
+        $__internal_af9e4ee4fca76642cfb63e5314ee913d5994f09c3541f62ea48c2fc0a6c01d76->leave($__internal_af9e4ee4fca76642cfb63e5314ee913d5994f09c3541f62ea48c2fc0a6c01d76_prof);
 
     }
 
@@ -79,7 +88,7 @@ class __TwigTemplate_b688c2def2d3f0b12eef090b4aa74c023c07edaad89ed50bd865a07a9b5
 
     public function getDebugInfo()
     {
-        return array (  60 => 13,  53 => 9,  48 => 7,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  67 => 20,  61 => 17,  53 => 12,  49 => 11,  40 => 4,  34 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -95,19 +104,28 @@ class __TwigTemplate_b688c2def2d3f0b12eef090b4aa74c023c07edaad89ed50bd865a07a9b5
         return new Twig_Source("{% extends 'BackOfficeBundle:Default:layout.html.twig' %}
 
 {% block content %}
-    <h1>Ville creation</h1>
+<main class=\"ui container\">
+  <section class=\"ui raised segment\">
+    <h1 class=\"ui horizontal divider header\">
+      <i class=\"home icon\"></i>
+      Création Ville
+    </h1>
 
     {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type=\"submit\" value=\"Create\" />
-    {{ form_end(form) }}
-
-    <ul>
-        <li>
-            <a href=\"{{ path('ville_index') }}\">Back to the list</a>
-        </li>
-    </ul>
+    {{ form_widget(form) }}
+    <div class=\"ui hidden divider\"></div>
+    <div class=\"ui grid\">
+      <div class=\"six wide column\">
+        <input class=\"ui primary button\" type=\"submit\" value=\"Creer\" />
+        {{ form_end(form) }}
+      </div>
+      <div class=\"six wide column\">
+        <a class=\"ui primary button\" href=\"{{ path('ville_index') }}\">Retourner à la liste</a>
+      </div>
+    </div>
+  </section>
+</main>
 {% endblock %}
-", ":ville:new.html.twig", "/home/ubuntu/convoit/app/Resources/views/ville/new.html.twig");
+", ":ville:new.html.twig", "/home/etdfrm1/www/prjsymf.cir3-frm-smf-ang-38/app/Resources/views/ville/new.html.twig");
     }
 }
